@@ -1,9 +1,10 @@
-export default function GitHubIcon() {
+export default function GitHubIcon({ className = "" }) {
   return (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 438.549 438.549"
-      style={{ width: "30px", height: "30px" }}
+      style={{ width: "30px", height: "30px", marginRight: "20px" }}
     >
       <path
         d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365
