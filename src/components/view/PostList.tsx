@@ -25,25 +25,41 @@ export default function PostList() {
         {posts.map((post) => (
           <div
             key={post.id}
-            className="bg-white p-4 rounded-lg shadow-md flex h-40"
+            className="bg-white p-4 rounded-lg shadow-md flex"
+            style={{
+              height: "200px",
+              transition: "transform 0.3s ease, background-color 0.3s ease",
+              cursor: "pointer",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "scale(1.01)";
+              e.currentTarget.style.backgroundColor = "#e1e1e1";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "scale(1)";
+              e.currentTarget.style.backgroundColor = "white";
+            }}
           >
             {/* Left Side */}
             <div className="flex-1 flex flex-col justify-between">
               {/* Hashtags */}
               <div>
-                {post.hashtags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="text-white text-sm mr-2 bg-[#393D3F] rounded-[5px] p-[3px] px-[8px] text-[12px]"
-                  >
-                    {tag}
-                  </span>
-                ))}
+                <div>
+                  {post.hashtags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="text-white text-sm mr-2 bg-[#393D3F] rounded-[5px] p-[3px] px-[8px] text-[12px]"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                {/* Title */}
+                <h2 className="text-xl font-bold break-words">{post.title}</h2>
               </div>
-              {/* Title */}
-              <h2 className="text-xl font-bold break-words">{post.title}</h2>
+
               {/* Date */}
-              <p className="text-gray-500 text-sm mt-4">{post.date}</p>
+              <p className="text-gray-500 text-sm">{post.date}</p>
             </div>
             {/* Right Side - Image */}
             <div className="ml-4">
