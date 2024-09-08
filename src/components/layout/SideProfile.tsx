@@ -2,12 +2,10 @@
 
 import { useState } from "react";
 import chan from "@/assets/images/chan.jpg";
-import GitHubIcon from "@/assets/svg/GitHubIcon";
-import LinkedInIcon from "@/assets/svg/LinkedInIcon";
-import YouTubeIcon from "@/assets/svg/YouTubeIcon";
 import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
+import SocialBtn from "@/components/ui/SocialBtn";
 
 export default function SideProfile() {
   const [showCategories1, setShowCategories1] = useState(false);
@@ -28,7 +26,7 @@ export default function SideProfile() {
 
   return (
     <aside className="bg-white h-screen w-64 shadow-md ">
-      <div className="flex flex-col items-center mb-2 p-6">
+      <div className="flex flex-col items-center mb-2 p-6 pb-2">
         <Image
           src={chan}
           alt="Profile Picture"
@@ -42,28 +40,7 @@ export default function SideProfile() {
         </p>
       </div>
 
-      <nav className="mb-6">
-        <ul className="flex justify-center items-center space-x-4">
-          <li>
-            <Link href="#profile" className="text-blue-500 hover:underline">
-              <GitHubIcon className="hover:bg-[#bcbcbc] hover:rounded-full" />
-            </Link>
-          </li>
-          <li>
-            <Link href="#settings" className="text-blue-500 hover:underline">
-              <YouTubeIcon className="hover:bg-red-500 hover:rounded-full" />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#notifications"
-              className="text-blue-500 hover:underline"
-            >
-              <LinkedInIcon className="hover:bg-blue-500 hover:rounded-full" />
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <SocialBtn />
 
       <section>
         {/* 카테고리1 */}

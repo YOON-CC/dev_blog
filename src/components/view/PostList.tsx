@@ -1,5 +1,8 @@
 "use client";
 
+import Image from "next/image";
+import banner from "@/assets/images/banner.png";
+
 export default function PostList() {
   const generatePosts = () => {
     return Array.from({ length: 50 }, (_, index) => ({
@@ -7,7 +10,7 @@ export default function PostList() {
       title: `Post ${index + 1}`,
       hashtags: [`#Tag${index + 1}`, `#Category${(index % 5) + 1}`],
       date: `2024-09-${String((index % 30) + 1).padStart(2, "0")}`,
-      imageUrl: "https://via.placeholder.com/150", // Replace with your image URL
+      imageUrl: { banner }, // Replace with your image URL
     }));
   };
 
@@ -44,11 +47,11 @@ export default function PostList() {
             </div>
             {/* Right Side - Image */}
             <div className="ml-4">
-              <img
-                src={post.imageUrl}
-                alt={post.title}
-                className="w-28 h-28 object-cover rounded-lg"
-                style={{ height: "100%", width: "250px" }}
+              <Image
+                src={banner}
+                alt="Profile Picture"
+                className="rounded-lg"
+                style={{ width: "290px", height: "100%" }}
               />
             </div>
           </div>

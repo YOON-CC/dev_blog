@@ -1,0 +1,111 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.icon-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.icon-item-one {
+  display: inline-block;
+  padding: 6px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.icon-item-one svg {
+  width: 24px;
+  height: 24px;
+  fill: black;
+  transition: fill 0.3s ease;
+}
+
+.icon-item-one:hover {
+  background-color: black;
+  border-color: black;
+  box-shadow: 0px 0px 3px 1px rgb(140, 140, 140);
+}
+
+.icon-item-one:hover svg {
+  fill: white;
+}
+
+.icon-item-two {
+  display: inline-block;
+  padding: 6px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.icon-item-two svg {
+  width: 24px;
+  height: 24px;
+  transition: fill 0.3s ease;
+}
+
+.icon-item-two-path1 {
+  fill: black;
+}
+
+.icon-item-two-path2 {
+  fill: white;
+}
+
+.icon-item-two:hover {
+  background-color: red;
+  border-color: red;
+  box-shadow: 0px 0px 3px 1px rgb(255, 164, 164);
+}
+
+.icon-item-two:hover .icon-item-two-path1 {
+  fill: white;
+}
+
+.icon-item-two:hover .icon-item-two-path2 {
+  fill: red;
+}
+
+.icon-item-three {
+  display: inline-block;
+  padding: 6px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.icon-item-three svg {
+  width: 24px;
+  height: 24px;
+  transition: fill 0.3s ease;
+}
+
+.icon-item-three-path1,
+.icon-item-three-path2,
+.icon-item-three-path3 {
+  fill: black;
+}
+
+.icon-item-three:hover {
+  background-color: #0a66c2;
+  border-color: #0a66c2;
+  box-shadow: 0px 0px 3px 1px #8ed0ff;
+}
+
+.icon-item-three:hover .icon-item-three-path1,
+.icon-item-three:hover .icon-item-three-path2,
+.icon-item-three:hover .icon-item-three-path3 {
+  fill: white;
+}
