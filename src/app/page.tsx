@@ -1,16 +1,22 @@
-import SideProfile from "@/components/layout/SideProfile";
+"use client";
 
-export default function Home() {
+import React from "react";
+import SideProfile from "@/components/layout/SideProfile";
+import PostList from "@/components/view/PostList";
+import MainHeader from "@/components/layout/MainHeader";
+
+const Home: React.FC = () => {
   return (
-    <main style={{ display: "flex" }}>
-      <SideProfile />
-      <div
-        className="flex-1"
-        style={{
-          height: "200px",
-          background: "linear-gradient(135deg, #2AE2A9, #7CC9D5, #90B8FA)",
-        }}
-      ></div>
-    </main>
+    <>
+      <MainHeader />
+      <main className="flex">
+        <SideProfile />
+        <section className="flex-1">
+          <PostList />
+        </section>
+      </main>
+    </>
   );
-}
+};
+
+export default Home;
