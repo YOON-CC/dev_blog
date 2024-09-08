@@ -14,8 +14,11 @@ export default function PostList() {
   const posts = generatePosts();
 
   return (
-    <article className="p-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <article
+      className="p-6 h-screen overflow-y-auto"
+      style={{ height: "calc(100vh - 2.5rem)" }}
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {posts.map((post) => (
           <div
             key={post.id}
@@ -26,7 +29,10 @@ export default function PostList() {
               {/* Hashtags */}
               <div>
                 {post.hashtags.map((tag, index) => (
-                  <span key={index} className="text-blue-500 text-sm mr-2">
+                  <span
+                    key={index}
+                    className="text-white text-sm mr-2 bg-[#393D3F] rounded-[5px] p-[3px] px-[8px] text-[12px]"
+                  >
                     {tag}
                   </span>
                 ))}
