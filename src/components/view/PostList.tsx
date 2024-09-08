@@ -7,10 +7,16 @@ export default function PostList() {
   const generatePosts = () => {
     return Array.from({ length: 50 }, (_, index) => ({
       id: index + 1,
-      title: `Post ${index + 1}`,
-      hashtags: [`#Tag${index + 1}`, `#Category${(index % 5) + 1}`],
+      title: `Post ${
+        index + 1
+      }ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ`,
+      hashtags: [
+        `#Category0${(index % 5) + 1}`,
+        `#Category1${(index % 5) + 1}`,
+        `#Category2${(index % 5) + 1}`,
+      ],
       date: `2024-09-${String((index % 30) + 1).padStart(2, "0")}`,
-      imageUrl: { banner }, // Replace with your image URL
+      imageUrl: banner, // Use the image URL directly
     }));
   };
 
@@ -25,12 +31,7 @@ export default function PostList() {
         {posts.map((post) => (
           <div
             key={post.id}
-            className="bg-white p-4 rounded-lg shadow-md flex"
-            style={{
-              height: "200px",
-              transition: "transform 0.3s ease, background-color 0.3s ease",
-              cursor: "pointer",
-            }}
+            className="bg-white p-4 rounded-lg shadow-md flex h-52 transition-transform duration-300 ease-in-out cursor-pointer justify-between"
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "scale(1.01)";
               e.currentTarget.style.backgroundColor = "#e1e1e1";
@@ -41,33 +42,35 @@ export default function PostList() {
             }}
           >
             {/* Left Side */}
-            <div className="flex-1 flex flex-col justify-between">
-              {/* Hashtags */}
+            <div className="flex-1 flex flex-col justify-between pr-4 max-w-[calc(100%-6rem)]">
               <div>
-                <div>
+                {/* Hashtags */}
+                <ul className="flex flex-wrap mb-2 list-none p-0 m-0">
                   {post.hashtags.map((tag, index) => (
-                    <span
+                    <li
                       key={index}
-                      className="text-white text-sm mr-2 bg-[#393D3F] rounded-[5px] p-[3px] px-[8px] text-[12px]"
+                      className="text-white text-sm mr-2 mb-2 bg-[#393D3F] rounded-[5px] px-[8px] text-[10px]"
+                      style={{ whiteSpace: "nowrap" }}
                     >
                       {tag}
-                    </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
                 {/* Title */}
-                <h2 className="text-xl font-bold break-words">{post.title}</h2>
+                <h2 className="text-xl font-bold mt-2 break-words">
+                  {post.title}
+                </h2>
               </div>
-
               {/* Date */}
               <p className="text-gray-500 text-sm">{post.date}</p>
             </div>
             {/* Right Side - Image */}
-            <div className="ml-4">
+            <div className="relative w-44 h-44">
               <Image
                 src={banner}
                 alt="Profile Picture"
                 className="rounded-lg"
-                style={{ width: "290px", height: "100%" }}
+                fill
               />
             </div>
           </div>
