@@ -4,10 +4,9 @@
 
 .markdown-preview blockquote {
   background-color: var(--blockquote-bg);
-  border-left: 5px solid #00ffb7;
-  padding: 1em;
+  border-left: 3px solid #00ffb7;
+  padding: 10px;
   margin: 1em 0;
-  border-radius: 4px;
 }
 
 .markdown-preview h1,

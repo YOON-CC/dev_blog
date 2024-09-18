@@ -25,7 +25,7 @@ export default function SideProfile() {
   };
 
   return (
-    <aside className="bg-white h-screen w-64 shadow-md ">
+    <aside className="bg-white h-screen w-56 shadow-md ">
       <div className="flex flex-col items-center mb-2 p-6 pb-2">
         <Image
           src={chan}
@@ -35,7 +35,7 @@ export default function SideProfile() {
           className="rounded-lg"
         />
         <h1 className="text-xl font-semibold p-0 mt-2">CHAN</h1>
-        <p className="text-gray-500 text-sm">
+        <p className="text-gray-500 text-xs">
           과정은 복잡하되, 결과는 단순하게
         </p>
       </div>

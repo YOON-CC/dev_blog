@@ -2,7 +2,10 @@ import Typewriter from "typewriter-effect";
 
 export default function MainHeader() {
   return (
-    <header className="h-10 bg-[#393D3F] flex justify-between items-center px-6 text-white text-4xl font-sans">
+    <header
+      className="h-10 bg-[white] flex justify-between items-center px-6 text-black text-4xl font-sans"
+      style={{ borderBottom: "1px solid #e3e3e3" }}
+    >
       {/* 헤더 */}
       <div className="flex text-xs">
         <span className="font-light">안녕하세요!&nbsp;</span>

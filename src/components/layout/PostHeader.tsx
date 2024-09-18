@@ -4,7 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 export default function PostHeader() {
   return (
-    <header className="h-10 bg-[#393D3F] flex justify-between items-center px-6 text-white text-4xl font-sans">
+    <header className="h-10 bg-[white] flex justify-between items-center px-6 text-black text-4xl font-sans">
       <div className="flex items-center gap-2.5">
         <Image
           src={chan}

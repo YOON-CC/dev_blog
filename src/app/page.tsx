@@ -1,22 +1,34 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SideProfile from "@/components/layout/SideProfile";
 import PostList from "@/components/view/PostList";
 import MainHeader from "@/components/layout/MainHeader";
+import PostHeader from "@/components/layout/PostHeader";
+import BannerContent from "@/components/layout/BannerContent";
+import MarkDwonViewer from "@/components/view/MarkDownViewr";
 
-const Home: React.FC = () => {
+export default function Home() {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <>
       <MainHeader />
       <main className="flex">
         <SideProfile />
-        <section className="flex-1">
-          <PostList />
-        </section>
+        {!toggle && (
+          <section className="flex-1" onClick={() => setToggle(!toggle)}>
+            <PostList />
+          </section>
+        )}
+        {toggle && (
+          <main className=" h-screen overflow-y-auto">
+            {/* <PostHeader /> */}
+            <BannerContent />
+            {/* <MarkDwonViewer apple={apple} /> */}
+          </main>
+        )}
       </main>
     </>
   );
-};
-
-export default Home;
+}
