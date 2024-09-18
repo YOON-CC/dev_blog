@@ -90,6 +90,13 @@ export default function PostList() {
           </Link>
         ))}
       </div>
+
+      <footer>
+        <div className="flex flex-col justify-center items-center mt-4 text-[11px] p-10">
+          <div>Thank You for Visiting My Blog, Have a Good Day 😆</div>
+          <div>ⓒYoonchan Cho</div>
+        </div>
+      </footer>
     </article>
   );
 }

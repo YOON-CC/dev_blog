@@ -1,4 +1,5 @@
 import Typewriter from "typewriter-effect";
+import DarkModeToggle from "../ui/DarkModeToggle";
 
 export default function MainHeader() {
   return (
@@ -27,11 +28,7 @@ export default function MainHeader() {
           />
         </span>
       </div>
-      <div className="flex justify-center">
-        <div className="rounded-full bg-red-500 w-2.5 h-2.5 mr-1.5"></div>
-        <div className="rounded-full bg-yellow-500 w-2.5 h-2.5"></div>
-        <div className="rounded-full bg-green-500 w-2.5 h-2.5 ml-1.5"></div>
-      </div>
+      <DarkModeToggle />
     </header>
   );
 }
