@@ -11,7 +11,7 @@ export default function PostHeader() {
           alt="Profile Picture"
           width={30}
           height={30}
-          className="w-[30px] h-[30px] rounded-full"
+          className="w-[25px] h-[25px] rounded-full"
         />
         <ul className="flex text-sm">
           <li className="flex items-center">

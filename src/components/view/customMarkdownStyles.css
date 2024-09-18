@@ -1,0 +1,29 @@
+.markdown-preview {
+  --blockquote-bg: #f3f3f3;
+}
+
+.markdown-preview blockquote {
+  background-color: var(--blockquote-bg);
+  border-left: 5px solid #00ffb7;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 4px;
+}
+
+.markdown-preview h1,
+.markdown-preview h2,
+.markdown-preview h3,
+.markdown-preview h4,
+.markdown-preview h5 {
+  border: none;
+}
+
+.markdown-preview hr {
+  border: none;
+  border-top: 2px solid rgb(225, 225, 225);
+  background: white;
+}
+
+ul {
+  list-style-type: disc;
+}

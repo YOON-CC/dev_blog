@@ -9,7 +9,7 @@ export default function BannerContent() {
         backgroundBlendMode: "darken",
       }}
     >
-      <div className="h-[150px] w-[800px]">
+      <div className="h-[150px] w-[600px]">
         <h1 className="h-[70%] text-[35px] font-bold text-white">
           JavaScript의 근본
         </h1>
