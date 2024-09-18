@@ -9,6 +9,7 @@ type Props = { children: ReactNode; list: ReactNode; post: ReactNode };
 
 export default function Layout({ children, list, post }: Props) {
   const params = useParams();
+  console.log([params]);
 
   return (
     <>

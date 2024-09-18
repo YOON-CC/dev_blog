@@ -5,6 +5,7 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 import MarkDwonViewer from "@/components/view/MarkDownViewr";
+import PostFooter from "@/components/layout/PostFooter";
 
 export async function getM() {
   const filePath = path.join(process.cwd(), "public", "content.md");
@@ -16,10 +17,13 @@ export default async function Page() {
   const apple = await getM();
   console.log(apple);
   return (
-    <main style={{ height: "100vh", overflow: "auto" }}>
-      <PostHeader />
+    <main
+      className="flex-1 h-screen overflow-y-auto"
+      style={{ height: "calc(100vh - 2.5rem)" }}
+    >
       <BannerContent />
       <MarkDwonViewer apple={apple} />
+      <PostFooter />
     </main>
   );
 }
