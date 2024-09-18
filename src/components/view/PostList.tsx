@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import banner from "@/assets/images/banner.png";
+import Link from "next/link";
 
 export default function PostList() {
   const generatePosts = () => {
@@ -29,7 +30,8 @@ export default function PostList() {
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {posts.map((post) => (
-          <div
+          <Link
+            href={`/post/${post.id}`}
             key={post.id}
             className="bg-white p-4 rounded-lg shadow-md flex h-52 transition-transform duration-300 ease-in-out cursor-pointer justify-between"
             onMouseEnter={(e) => {
@@ -73,7 +75,7 @@ export default function PostList() {
                 fill
               />
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </article>

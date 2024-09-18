@@ -34,7 +34,7 @@ export default function SideProfile() {
           height={250}
           className="rounded-lg"
         />
-        <h1 className="text-xl font-semibold p-0 mt-2">NAME</h1>
+        <h1 className="text-xl font-semibold p-0 mt-2">CHAN</h1>
         <p className="text-gray-500 text-sm">
           과정은 복잡하되, 결과는 단순하게
         </p>

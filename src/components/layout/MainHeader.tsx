@@ -6,7 +6,7 @@ export default function MainHeader() {
       {/* 헤더 */}
       <div className="flex text-xs">
         <span className="font-light">안녕하세요!&nbsp;</span>
-        <span className="font-bold">&quot;NAME&quot;</span>
+        <span className="font-bold">&quot;CHAN&quot;</span>
         <span className="font-light">의 연구노트 입니다.&nbsp;</span>
         <span className="font-light">저에게 있어서 개발은&nbsp;</span>
         <span className="font-bold">
