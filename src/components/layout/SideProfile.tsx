@@ -25,7 +25,7 @@ export default function SideProfile() {
   };
 
   return (
-    <aside className="bg-white h-screen w-56 shadow-md" style={{ zIndex: "1" }}>
+    <aside className="bg-white h-screen w-56 shadow-md" style={{ zIndex: "1", width: '340px' }}>
       <Link href={"/"} className="flex flex-col items-center mb-2 p-6 pb-2">
         <Image
           src={chan}
