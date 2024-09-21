@@ -23,24 +23,19 @@ export default function PostList() {
 
   const posts = generatePosts();
 
-  const hashtags = Array.from({ length: 30 }, (_, i) => `# 해시태그 ${i + 1}`);
-
   return (
     <article
-      className="pl-20 pr-20  h-screen overflow-y-auto"
-      style={{ height: "calc(100vh - 2.5rem)" }}
+      className="h-screen"
+      style={{
+        width: "750px",
+        marginLeft: "20px",
+        marginRight: "20px",
+        height: "fit-content",
+      }}
     >
-      <div className="w-full flex flex-wrap items-center pt-8 pb-8 gap-3">
-        {hashtags.map((hashtag, index) => (
-          <div
-            key={index}
-            className="bg-[#e3e3e3] text-gray-700 rounded-full text-xs px-2 py-1 flex justify-center items-center"
-          >
-            {hashtag}
-          </div>
-        ))}
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 gap-8">
+        {" "}
+        {/* Single column grid */}
         {posts.map((post) => (
           <Link
             href={`/post/${post.id}`}
@@ -56,14 +51,14 @@ export default function PostList() {
             }}
           >
             {/* Left Side */}
-            <div className="flex-1 flex flex-col justify-between pr-4 max-w-[calc(100%-6rem)]">
+            <div className="flex-1 flex flex-col justify-between pr-4">
               <div>
                 {/* Hashtags */}
                 <ul className="flex flex-wrap mb-2 list-none p-0 m-0">
                   {post.hashtags.map((tag, index) => (
                     <li
                       key={index}
-                      className="text-white text-sm mr-2 mb-2 bg-[#393D3F] rounded-[5px] px-[8px] text-[10px]"
+                      className="text-white text-sm mr-2 mb-2 bg-[#00DF9C] rounded-[5px] px-[8px] text-[10px]"
                       style={{ whiteSpace: "nowrap" }}
                     >
                       {tag}

@@ -17,7 +17,7 @@ export default function DarkModeToggle() {
     <div className="flex justify-center items-center">
       <div
         onClick={handleToggle}
-        className={`cursor-pointer w-[100px] h-6 flex items-center rounded-full p-1 duration-300 bg-[#e3e3e3]`}
+        className={`cursor-pointer w-[100px] h-6 flex items-center rounded-full p-1 duration-300 bg-[#f0f0f0]`}
       >
         <div
           className={`transform duration-300 ${

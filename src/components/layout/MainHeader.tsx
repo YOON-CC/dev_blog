@@ -4,11 +4,17 @@ import DarkModeToggle from "../ui/DarkModeToggle";
 export default function MainHeader() {
   return (
     <header
-      className="h-10 bg-[white] flex justify-between items-center px-6 text-black text-4xl font-sans"
-      style={{ borderBottom: "1px solid #e3e3e3" }}
+      className="bg-[rgba(255,255,255,0.7)] backdrop-blur-md flex justify-between items-center px-12 text-black font-sans"
+      style={{
+        borderBottom: "1px solid #e3e3e3",
+        height: "50px",
+        position: "sticky",
+        top: 0,
+        zIndex: 999,
+      }}
     >
       {/* 헤더 */}
-      <div className="flex text-xs">
+      <div className="flex text-[15px]">
         <span className="font-light">안녕하세요!&nbsp;</span>
         <span className="font-bold">&quot;CHAN&quot;</span>
         <span className="font-light">의 연구노트 입니다.&nbsp;</span>
