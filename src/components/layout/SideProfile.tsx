@@ -25,7 +25,7 @@ export default function SideProfile() {
   };
 
   return (
-    <aside className="bg-white shadow-md z-10 w-[300px] h-[600px] rounded-lg sticky top-[100px]">
+    <aside className="bg-white shadow-md z-10 w-[300px] h-[550px] rounded-lg sticky top-[100px]">
       <Link href={"/"} className="flex flex-col items-center mb-6 px-10 pt-10">
         <Image
           src={chan}

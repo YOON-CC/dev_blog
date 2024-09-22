@@ -14,7 +14,6 @@ export default function MarkDwonViewer(apple: any) {
         display: "flex",
         justifyContent: "center",
         background: "white",
-        paddingTop: "70px",
       }}
     >
       <MDEditor.Markdown

@@ -18,10 +18,15 @@ export default async function Page() {
   console.log(apple);
   return (
     <main
-      className="flex-1 h-screen overflow-y-auto"
-      style={{ height: "calc(100vh - 2.5rem)" }}
+      className="h-screen"
+      style={{
+        width: "750px",
+        marginLeft: "20px",
+        marginRight: "20px",
+        height: "fit-content",
+      }}
     >
-      <BannerContent />
+      {/* <BannerContent /> */}
       <MarkDwonViewer apple={apple} />
       <PostFooter />
     </main>
