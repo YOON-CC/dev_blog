@@ -1,34 +1,29 @@
+// DarkModeToggle.tsx
 "use client";
 
-import { useState } from "react";
+import { useDarkMode } from "@/context/DarkModeContext";
 
 export default function DarkModeToggle() {
-  const [isOn, setIsOn] = useState(false);
-
-  const handleToggle = () => {
-    setIsOn(true);
-
-    setTimeout(() => {
-      setIsOn(false);
-    }, 300);
-  };
+  const { isOn, toggleDarkMode } = useDarkMode();
 
   return (
     <div className="flex justify-center items-center">
       <div
-        onClick={handleToggle}
-        className={`cursor-pointer w-[100px] h-6 flex items-center rounded-full p-1 duration-300 bg-[#f0f0f0]`}
+        onClick={toggleDarkMode}
+        className={`cursor-pointer w-[62px] h-[34px] flex items-center rounded-full p-1 duration-300 ${
+          isOn ? "bg-[#272727]" : "bg-yellow-400"
+        }`}
       >
         <div
-          className={`transform duration-300 ${
-            isOn ? "translate-x-0" : "translate-x-8"
+          className={`w-[26px] h-[26px] flex justify-center items-center rounded-full bg-white shadow-md transform duration-300 ${
+            isOn ? "translate-x-[28px]" : "translate-x-0"
           }`}
         >
-          <div className="flex">
-            <div className="rounded-full bg-red-500 w-4 h-4 mr-1.5"></div>
-            <div className="rounded-full bg-yellow-500 w-4 h-4"></div>
-            <div className="rounded-full bg-green-500 w-4 h-4 ml-1.5"></div>
-          </div>
+          {isOn ? (
+            <div className="text-gray-800">🌙</div>
+          ) : (
+            <div className="text-yellow-500">☀️</div>
+          )}
         </div>
       </div>
     </div>

@@ -25,7 +25,7 @@ export default function SideProfile() {
   };
 
   return (
-    <aside className="bg-white shadow-md z-10 w-[300px] h-[550px] rounded-lg sticky top-[100px]">
+    <aside className="bg-white shadow-md z-10 w-[300px] h-[550px] rounded-lg sticky top-[100px] dark:bg-[#1D1D1D]">
       <Link href={"/"} className="flex flex-col items-center mb-6 px-10 pt-10">
         <Image
           src={chan}
@@ -34,18 +34,20 @@ export default function SideProfile() {
           height={250}
           className="rounded-lg"
         />
-        <h1 className="text-2xl font-semibold mt-2">CHAN</h1>
-        <p className="text-gray-500 text-sm">
+        <h1 className="text-2xl font-semibold mt-2 dark:text-[#ffffff]">
+          CHAN
+        </h1>
+        <p className="text-gray-500 text-sm dark:text-[#cdcdcd]">
           과정은 복잡하되, 결과는 단순하게
         </p>
       </Link>
 
       <SocialBtn />
 
-      <section className="px-8">
+      <section className="px-8 dark:text-[#ffffff]">
         {/* 카테고리1 */}
         <ul
-          className="list-none py-1 flex justify-between items-center cursor-pointer hover:bg-gray-200 rounded-lg mt-2 px-2"
+          className="list-none py-1 flex justify-between items-center cursor-pointer hover:bg-gray-200 rounded-lg mt-2 px-2 dark:hover:bg-[#363636]"
           onClick={toggleCategories1}
         >
           <div>WEB DEV</div>
@@ -68,7 +70,7 @@ export default function SideProfile() {
 
         {/* 카테고리2 */}
         <ul
-          className="list-none py-1 flex justify-between items-center cursor-pointer hover:bg-gray-200 rounded-lg mt-2 px-2"
+          className="list-none py-1 flex justify-between items-center cursor-pointer hover:bg-gray-200 rounded-lg mt-2 px-2 dark:hover:bg-[#363636]"
           onClick={toggleCategories2}
         >
           <div>RESEARCH</div>
@@ -91,7 +93,7 @@ export default function SideProfile() {
 
         {/* 카테고리3 */}
         <ul
-          className="list-none py-1 flex justify-between items-center cursor-pointer hover:bg-gray-200 rounded-lg mt-2 px-2"
+          className="list-none py-1 flex justify-between items-center cursor-pointer hover:bg-gray-200 rounded-lg mt-2 px-2 dark:hover:bg-[#363636]"
           onClick={toggleCategories3}
         >
           <div>ETC</div>

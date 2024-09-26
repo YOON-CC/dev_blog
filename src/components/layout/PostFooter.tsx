@@ -4,9 +4,9 @@ import { IoIosArrowForward } from "react-icons/io";
 
 export default function PostFooter() {
   return (
-    <footer className="bg-white flex justify-center py-24">
+    <footer className="flex justify-center py-24">
       <div className="w-[600px]">
-        <div className="flex items-center">
+        <div className="flex items-center dark:text-[#ffffff]">
           <Image
             src={chan}
             alt="Profile Picture"
@@ -20,7 +20,7 @@ export default function PostFooter() {
           </div>
         </div>
         <hr className="mt-4" />
-        <div className="flex flex-col justify-center items-center mt-4 text-[11px]">
+        <div className="flex flex-col justify-center items-center mt-4 text-[11px] dark:text-[#ffffff]">
           <div>Thank You for Visiting My Blog, Have a Good Day 😆</div>
           <div>ⓒYoonchan Cho</div>
         </div>

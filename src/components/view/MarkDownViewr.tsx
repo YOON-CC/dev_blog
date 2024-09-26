@@ -1,25 +1,24 @@
 "use client";
 import MDEditor from "@uiw/react-md-editor";
-// import "@uiw/react-md-editor/markdown-editor.css";
-// import "@uiw/react-markdown-preview/markdown.css";
 import "./customMarkdownStyles.css";
 
-export default function MarkDwonViewer(apple: any) {
-  console.log(apple.apple.content);
+interface MarkDwonViewerProps {
+  apple: {
+    content: string;
+  };
+}
 
+export default function MarkDwonViewer({ apple }: MarkDwonViewerProps) {
+  console.log(apple.content);
+
+  let hello = true;
   return (
-    <div
-      data-color-mode="light"
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        background: "white",
-      }}
-    >
+    <div className="flex justify-center" data-color-mode="light">
       <MDEditor.Markdown
-        className="markdown-preview"
-        style={{ width: "600px" }}
-        source={apple.apple.content}
+        className={`${
+          hello ? "light-markdown-preview" : "dark-markdown-preview"
+        } w-[600px] bg-white dark:bg-[#121212] text-black dark:text-[#ffffff]`}
+        source={apple.content}
       />
     </div>
   );

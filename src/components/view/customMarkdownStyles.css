@@ -1,28 +1,31 @@
-.markdown-preview {
-  --blockquote-bg: #f3f3f3;
-}
-
-.markdown-preview blockquote {
-  background-color: var(--blockquote-bg);
-  border-left: 3px solid #00ffb7;
-  padding: 10px;
-  margin: 1em 0;
-}
-
-.markdown-preview h1,
-.markdown-preview h2,
-.markdown-preview h3,
-.markdown-preview h4,
-.markdown-preview h5 {
-  border: none;
-}
-
-.markdown-preview hr {
+/* 화이트 모드 */
+.light-markdown-preview hr {
   border: none;
   border-top: 2px solid rgb(225, 225, 225);
-  background: white;
+  background: none;
 }
 
-ul {
-  list-style-type: disc;
+.light-markdown-preview blockquote {
+  background-color: #f3f3f6;
+  border-left: 5px solid #00ffb7;
+  padding: 10px;
+  margin: 1em 0;
+  border-radius: 5px;
+}
+
+.light-markdown-preview h1,
+.light-markdown-preview h2,
+.light-markdown-preview h3,
+.light-markdown-preview h4,
+.light-markdown-preview h5 {
+  border: none;
+}
+
+/*다크모드*/
+.dark-markdown-preview blockquote {
+  background-color: var(--blockquote-bg);
+  border-left: 5px solid #ffffff;
+  padding: 10px;
+  margin: 1em 0;
+  border-radius: 5px;
 }

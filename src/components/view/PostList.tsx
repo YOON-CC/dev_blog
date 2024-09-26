@@ -40,14 +40,12 @@ export default function PostList() {
           <Link
             href={`/post/${post.id}`}
             key={post.id}
-            className="bg-white p-4 rounded-lg shadow-md flex h-52 transition-transform duration-300 ease-in-out cursor-pointer justify-between"
+            className="bg-white p-4 rounded-lg shadow-md flex h-52 transition-transform duration-300 ease-in-out cursor-pointer justify-between dark:bg-[#1D1D1D] hover:bg-[#e1e1e1] dark:hover:bg-[#272727]"
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "scale(1.01)";
-              e.currentTarget.style.backgroundColor = "#e1e1e1";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "scale(1)";
-              e.currentTarget.style.backgroundColor = "white";
             }}
           >
             {/* Left Side */}
@@ -66,12 +64,14 @@ export default function PostList() {
                   ))}
                 </ul>
                 {/* Title */}
-                <h2 className="text-xl font-bold mt-2 break-words">
+                <h2 className="text-xl font-bold mt-2 break-words dark:text-[#ffffff]">
                   {post.title}
                 </h2>
               </div>
               {/* Date */}
-              <p className="text-gray-500 text-sm">{post.date}</p>
+              <p className="text-gray-500 text-sm dark:text-[#bebebe]">
+                {post.date}
+              </p>
             </div>
             {/* Right Side - Image */}
             <div className="relative w-44 h-44">
@@ -87,7 +87,7 @@ export default function PostList() {
       </div>
 
       <footer>
-        <div className="flex flex-col justify-center items-center mt-4 text-[11px] p-10">
+        <div className="flex flex-col justify-center items-center mt-4 text-[11px] p-10 dark:text-[#ffffff]">
           <div>Thank You for Visiting My Blog, Have a Good Day 😆</div>
           <div>ⓒYoonchan Cho</div>
         </div>

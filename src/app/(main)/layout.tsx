@@ -21,14 +21,14 @@ export default function Layout({ children, list, post }: Props) {
     <>
       <MainHeader />
       {isParamsEmpty && <MainBanner />}
-      {!isParamsEmpty && <BannerContent />}
+      {/* {!isParamsEmpty && <BannerContent />} */}
       <main className="flex justify-center mt-[20px]">
         {isParamsEmpty && <SideProfile />}
-        {!isParamsEmpty && <DetailBar />}
+        {/* {!isParamsEmpty && <DetailBar />} */}
 
         {children}
         {isParamsEmpty ? list : post}
-        <TagBar />
+        {isParamsEmpty && <TagBar />}
       </main>
     </>
   );
