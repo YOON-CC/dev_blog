@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -20,7 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <body className="dark:bg-[#121212]">
-        <DarkModeProvider>{children}</DarkModeProvider>
+        {/* <DarkModeProvider> */}
+        <MainHeader />
+        {children}
+        {/* </DarkModeProvider> */}
       </body>
     </html>
   );
