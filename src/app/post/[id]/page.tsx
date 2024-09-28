@@ -9,14 +9,14 @@ import PostFooter from "@/components/layout/PostFooter";
 import Image from "next/image";
 import banner from "@/assets/images/banner.png";
 
-// export async function getM() {
-//   const filePath = path.join(process.cwd(), "public", "content.md");
-//   const fileContent = fs.readFileSync(filePath, "utf8");
-//   return matter(fileContent);
-// }
+export async function getM() {
+  const filePath = path.join(process.cwd(), "public", "content.md");
+  const fileContent = fs.readFileSync(filePath, "utf8");
+  return matter(fileContent);
+}
 
 export default async function Page() {
-  // const apple = await getM();
+  const apple = await getM();
   // console.log(apple);
 
   const hashTags = [
@@ -65,7 +65,7 @@ export default async function Page() {
       </article>
 
       {/* <BannerContent /> */}
-      {/* <MarkDwonViewer apple={apple} /> */}
+      <MarkDwonViewer apple={apple} />
       <PostFooter />
     </main>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import banner from "@/assets/images/banner.png";
+import banner from "@/assets/images/banner2.png";
 import Link from "next/link";
 
 export default function PostList() {
@@ -49,14 +49,17 @@ export default function PostList() {
             }}
           >
             {/* Left Side */}
-            <div className="flex-1 flex flex-col justify-between pr-4">
+            <div
+              className="flex flex-col justify-between"
+              style={{ width: "48%" }}
+            >
               <div>
                 {/* Hashtags */}
                 <ul className="flex flex-wrap mb-2 list-none p-0 m-0">
                   {post.hashtags.map((tag, index) => (
                     <li
                       key={index}
-                      className="text-white text-sm mr-2 mb-2 bg-[#00DF9C] rounded-[5px] px-[8px] text-[10px]"
+                      className="text-black text-sm mr-2 mb-2 bg-[#e3e3e3] rounded-[5px] px-[8px] text-[10px] shadow-md "
                       style={{ whiteSpace: "nowrap" }}
                     >
                       {tag}
@@ -74,7 +77,7 @@ export default function PostList() {
               </p>
             </div>
             {/* Right Side - Image */}
-            <div className="relative w-44 h-44">
+            <div className="relative w-44 h-44" style={{ width: "48%" }}>
               <Image
                 src={banner}
                 alt="Profile Picture"
