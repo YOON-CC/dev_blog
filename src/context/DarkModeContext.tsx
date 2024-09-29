@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 interface DarkModeContextType {
-  isOn: boolean;
+  isOn: boolean | null; // 초기값을 null로 설정
   toggleDarkMode: () => void;
 }
 
@@ -14,18 +14,28 @@ const DarkModeContext = createContext<DarkModeContextType | undefined>(
 export const DarkModeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [isOn, setIsOn] = useState<boolean>(() => {
-    const darkModeSetting = localStorage.getItem("dark-mode");
-    return darkModeSetting === "true";
-  });
+  const [isOn, setIsOn] = useState<boolean | null>(null); // 초기값을 null로 설정
 
   useEffect(() => {
-    if (isOn) {
+    const darkModeSetting = localStorage.getItem("dark-mode");
+    if (darkModeSetting === "true") {
+      setIsOn(true);
       document.documentElement.classList.add("dark");
-      localStorage.setItem("dark-mode", "true");
     } else {
+      setIsOn(false);
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("dark-mode", "false");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isOn !== null) {
+      if (isOn) {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("dark-mode", "true");
+      } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("dark-mode", "false");
+      }
     }
   }, [isOn]);
 
