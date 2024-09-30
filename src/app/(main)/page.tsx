@@ -1,11 +1,18 @@
 import MainBanner from "@/components/ui/MainBanner";
 
-export default function Home() {
-  // remote commit2
-  // 나중에 복잡한 로직 들어갈 수도 있음
-  return (
-    <>
-      <MainBanner />
-    </>
-  );
+export async function getAuctionInfo() {
+  const res = await fetch("http://localhost:3000/api/list", {
+    cache: "no-store",
+    headers: {},
+  });
+
+  const data = await res.json();
+
+  return data;
+}
+
+export default async function Home() {
+  const result = await getAuctionInfo();
+  console.log(result);
+  return <MainBanner />;
 }
