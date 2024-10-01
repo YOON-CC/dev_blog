@@ -1,6 +1,7 @@
 import { MongoClient } from "mongodb";
 
-const url = "";
+const url = `${process.env.NEXT_PUBLIC_REACT_APP_DB_URL}`;
+
 const options: any = { useNewUrlParser: true };
 let connectDB: Promise<MongoClient>;
 

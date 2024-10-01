@@ -1,15 +1,31 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
+import "@uiw/react-md-editor/markdown-editor.css"; // MDEditor CSS 파일 추가
+import "@uiw/react-markdown-preview/markdown.css"; // Markdown 미리보기 CSS
+
+const MDEditor = dynamic(() => import("@uiw/react-md-editor"), { ssr: false });
 
 export default function Write() {
   const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+  const [phrase, setPhrase] = useState("");
+
+  const [category, setCategory] = useState("");
+  const [categories, setCategories] = useState<string[]>([]);
+  const [content, setContent] = useState<string | undefined>(""); // MDEditor의 기본값은 undefined 허용
+
+  const addCategory = () => {
+    if (category.trim() !== "") {
+      setCategories([...categories, category.trim()]);
+      setCategory(""); // 카테고리 입력 필드를 비움
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // 폼 기본 동작 방지
-    console.log(title, content);
-    // 서버로 POST 요청
+    console.log(title, categories, content);
+
     try {
       const response = await fetch("http://localhost:3000/api/post/new", {
         method: "POST",
@@ -18,6 +34,8 @@ export default function Write() {
         },
         body: JSON.stringify({
           title: title,
+          phrase: phrase,
+          categories: categories,
           content: content,
         }),
       });
@@ -25,6 +43,8 @@ export default function Write() {
       if (response.ok) {
         alert("글 작성 완료");
         setTitle("");
+        setPhrase("");
+        setCategories([]);
         setContent("");
       } else {
         alert("글 작성 실패");
@@ -36,25 +56,62 @@ export default function Write() {
   };
 
   return (
-    <div className="p-20">
-      <h4>글작성</h4>
-      <form
-        onSubmit={handleSubmit}
-        style={{ display: "flex", flexDirection: "column" }}
-      >
+    <div className="p-2 w-[90%] mx-auto">
+      <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-8">
         <input
           name="title"
           placeholder="제목"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          className="p-2 border border-gray-300 rounded"
         />
-        <textarea
-          name="content"
-          placeholder="내용"
+        <input
+          name="phrase"
+          placeholder="명언"
+          value={phrase}
+          onChange={(e) => setPhrase(e.target.value)}
+          className="p-2 border border-gray-300 rounded"
+        />
+        <div className="flex space-x-2">
+          <input
+            name="category"
+            placeholder="카테고리"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            className="p-2 border border-gray-300 rounded flex-grow"
+          />
+          <button
+            type="button"
+            onClick={addCategory}
+            className="bg-green-500 text-white p-2 rounded hover:bg-green-600"
+          >
+            추가
+          </button>
+        </div>
+        <div>
+          {categories.length > 0 && (
+            <div className="mt-2">
+              <p>추가된 카테고리:</p>
+              <ul className="list-disc list-inside">
+                {categories.map((cat, index) => (
+                  <li key={index}>{cat}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+        <MDEditor
           value={content}
-          onChange={(e) => setContent(e.target.value)}
+          onChange={setContent}
+          className="p-2 border border-gray-300 rounded"
+          height={600} // 높이 설정
         />
-        <button type="submit">제출</button>
+        <button
+          type="submit"
+          className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+        >
+          제출
+        </button>
       </form>
     </div>
   );
