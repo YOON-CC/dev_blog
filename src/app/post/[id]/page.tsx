@@ -21,28 +21,16 @@ export default async function Page(props: any) {
   const result = await getDetailInfo(id);
 
   return (
-    <main
-      className="h-screen"
-      style={{
-        width: "750px",
-        marginLeft: "20px",
-        marginRight: "20px",
-        height: "fit-content",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <article className="bg-white w-full max-w-[600px] pb-20 pt-16 dark:bg-[#121212]">
+    <main className="w-[90%] xl:w-[750px] mx-[20px] flex flex-col justify-center items-center h-fit">
+      <article className="bg-white w-full max-w-[100%] pb-16 xl:pb-20 pt-10 xl:pt-16 dark:bg-[#121212]">
         <div className="text-gray-500 dark:text-[#c4c4c4]">
           {utcToKst(result.post.createdAt)}
         </div>
-        <h1 className="text-4xl font-bold mt-4 dark:text-[#ffffff]">
+        <h1 className="text-4xl font-bold mt-2 xl:mt-4 dark:text-[#ffffff]">
           {result.post.title}
         </h1>
 
-        <div className="flex flex-wrap gap-2 mt-4 ">
+        <div className="flex flex-wrap gap-2 mt-2 xl:mt-4 ">
           {result.post.categories
             .filter((tag: string) => tag !== "All")
             .map((tag: any, index: any) => (
@@ -54,7 +42,7 @@ export default async function Page(props: any) {
               </span>
             ))}
         </div>
-        <div className="w-full bg-gray-100 p-4 mt-10 rounded-2xl dark:bg-[#1D1D1D] dark:text-[#d9d9d9]">
+        <div className="w-full bg-gray-100 p-4 mt-6 xl:mt-10 rounded-2xl dark:bg-[#1D1D1D] dark:text-[#d9d9d9]">
           &quot;{result.post.phrase}&quot;
         </div>
       </article>

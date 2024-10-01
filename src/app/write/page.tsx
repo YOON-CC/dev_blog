@@ -28,22 +28,19 @@ export default function Write() {
     console.log(title, categories, content);
 
     try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/post/new`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            title: title,
-            thumbnail: thumbnail,
-            phrase: phrase,
-            categories: categories,
-            content: content,
-          }),
-        }
-      );
+      const response = await fetch(`http://localhost:3000/api/post/new`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: title,
+          thumbnail: thumbnail,
+          phrase: phrase,
+          categories: categories,
+          content: content,
+        }),
+      });
 
       if (response.ok) {
         alert("글 작성 완료");

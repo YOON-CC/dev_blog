@@ -5,9 +5,8 @@ import SocialBtn from "@/components/ui/SocialBtn";
 import Link from "next/link";
 
 export default function SideProfile() {
-
   return (
-    <aside className="bg-white shadow-md z-10 w-[300px] h-[550px] rounded-lg sticky top-[100px] dark:bg-[#1D1D1D]">
+    <aside className="hidden xl:block bg-white shadow-md z-10 w-[300px] h-[550px] rounded-lg sticky top-[100px] dark:bg-[#1D1D1D]">
       <Link href={"/"} className="flex flex-col items-center mb-6 px-10 pt-10">
         <Image
           src={chan}

@@ -5,7 +5,7 @@ import { IoIosArrowForward } from "react-icons/io";
 export default function PostFooter() {
   return (
     <footer className="flex justify-center py-24">
-      <div className="w-[600px]">
+      <div className="w-[100%] xl:w-[600px]">
         <div className="flex items-center dark:text-[#ffffff]">
           <Image
             src={chan}

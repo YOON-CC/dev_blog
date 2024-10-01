@@ -13,7 +13,9 @@ export default function Layout({ children, list, post }: Props) {
         <SideProfile />
         <CategoryProvider>
           {list}
-          <TagBar />
+          <div className="hidden xl:block">
+            <TagBar />
+          </div>
         </CategoryProvider>
       </main>
     </Fragment>

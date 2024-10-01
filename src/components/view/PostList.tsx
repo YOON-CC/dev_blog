@@ -4,6 +4,8 @@ import Image from "next/image";
 import banner from "@/assets/images/banner2.png";
 import Link from "next/link";
 import utcToKst from "@/utils/utcToKst";
+import SocialBtn from "../ui/SocialBtn";
+import TagBar from "../layout/TagBar";
 
 interface Props {
   postList: any;
@@ -11,15 +13,12 @@ interface Props {
 
 export default function PostList({ postList }: Props) {
   return (
-    <article
-      className="h-screen"
-      style={{
-        width: "750px",
-        marginLeft: "20px",
-        marginRight: "20px",
-        height: "fit-content",
-      }}
-    >
+    <article className="w-[90%] xl:w-[750px] mx-5 h-fit">
+      <div className="xl:hidden pt-4 pb-6">
+        <SocialBtn />
+        <TagBar />
+      </div>
+
       <div className="grid grid-cols-1 gap-8">
         {" "}
         {/* 거꾸로 출력 */}
@@ -30,7 +29,7 @@ export default function PostList({ postList }: Props) {
             <Link
               href={`/post/${post._id}`}
               key={post._id}
-              className="bg-white p-4 rounded-lg shadow-md flex h-52 transition-transform duration-300 ease-in-out cursor-pointer justify-between dark:bg-[#1D1D1D] hover:bg-[#e1e1e1] dark:hover:bg-[#272727]"
+              className=" bg-white p-4 rounded-lg shadow-md xl:flex xl:h-52 transition-transform duration-300 ease-in-out cursor-pointer justify-between dark:bg-[#1D1D1D] hover:bg-[#e1e1e1] dark:hover:bg-[#272727]"
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "scale(1.01)";
               }}
@@ -39,10 +38,7 @@ export default function PostList({ postList }: Props) {
               }}
             >
               {/* Left Side */}
-              <div
-                className="flex flex-col justify-between"
-                style={{ width: "48%" }}
-              >
+              <div className="w-[100%] flex flex-col justify-between xl:w-[48%]">
                 <div>
                   {/* Hashtags */}
                   <ul className="flex flex-wrap mb-2 list-none p-0 m-0">
@@ -64,12 +60,12 @@ export default function PostList({ postList }: Props) {
                   </h2>
                 </div>
                 {/* Date */}
-                <p className="text-gray-500 text-sm dark:text-[#bebebe]">
+                <p className="text-gray-500 text-sm dark:text-[#bebebe] mt-2 xl:mt-0">
                   {utcToKst(post.createdAt)}
                 </p>
               </div>
               {/* Right Side - Image */}
-              <div className="relative w-44 h-44" style={{ width: "48%" }}>
+              <div className="relative w-[100%] h-44 xl:w-[48%]  mt-4 xl:mt-0">
                 <Image
                   src={post.thumbnail}
                   width={200}

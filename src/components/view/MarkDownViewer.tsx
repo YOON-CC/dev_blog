@@ -21,11 +21,11 @@ export default function MarkDwonViewer({ content }: Props) {
   const apple = content;
 
   return (
-    <div className="flex justify-center" data-color-mode="light">
+    <div className="w-[100%] flex justify-center" data-color-mode="light">
       <MDEditor.Markdown
         className={`${
           hello ? "light-markdown-preview" : "dark-markdown-preview"
-        } w-[600px] bg-white dark:bg-[#121212] text-black dark:text-[#ffffff]`}
+        } w-[100%] bg-white dark:bg-[#121212] text-black dark:text-[#ffffff]`}
         source={apple}
       />
     </div>
