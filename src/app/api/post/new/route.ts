@@ -14,6 +14,7 @@ export async function POST(req: NextRequest, res: any) {
     const postCollection = db.collection("post");
     const postResult = await postCollection.insertOne({
       title: body.title,
+      thumbnail: body.thumbnail,
       phrase: body.phrase,
       categories: body.categories,
       createdAt: new Date(),

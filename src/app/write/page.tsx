@@ -9,6 +9,7 @@ const MDEditor = dynamic(() => import("@uiw/react-md-editor"), { ssr: false });
 
 export default function Write() {
   const [title, setTitle] = useState("");
+  const [thumbnail, setThumbnail] = useState("");
   const [phrase, setPhrase] = useState("");
 
   const [category, setCategory] = useState("");
@@ -27,22 +28,27 @@ export default function Write() {
     console.log(title, categories, content);
 
     try {
-      const response = await fetch("http://localhost:3000/api/post/new", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title: title,
-          phrase: phrase,
-          categories: categories,
-          content: content,
-        }),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/post/new`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title: title,
+            thumbnail: thumbnail,
+            phrase: phrase,
+            categories: categories,
+            content: content,
+          }),
+        }
+      );
 
       if (response.ok) {
         alert("글 작성 완료");
         setTitle("");
+        setThumbnail("");
         setPhrase("");
         setCategories(["All"]);
         setContent("");
@@ -63,6 +69,13 @@ export default function Write() {
           placeholder="제목"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          className="p-2 border border-gray-300 rounded"
+        />
+        <input
+          name="thumbnail"
+          placeholder="썸네일 주소"
+          value={thumbnail}
+          onChange={(e) => setThumbnail(e.target.value)}
           className="p-2 border border-gray-300 rounded"
         />
         <input
@@ -91,10 +104,11 @@ export default function Write() {
         <div>
           {categories.length > 0 && (
             <div className="mt-2">
-              <p>추가된 카테고리:</p>
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-inside flex">
                 {categories.map((cat, index) => (
-                  <li key={index}>{cat}</li>
+                  <li key={index} className="ml-6">
+                    {cat}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -104,7 +118,7 @@ export default function Write() {
           value={content}
           onChange={setContent}
           className="p-2 border border-gray-300 rounded"
-          height={600} // 높이 설정
+          height={500} // 높이 설정
         />
         <button
           type="submit"
