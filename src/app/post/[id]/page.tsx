@@ -4,7 +4,7 @@ import utcToKst from "@/utils/utcToKst";
 
 async function getDetailInfo(id: any) {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/detail/${id}`,
+    `https://dev-blog-mu-ashen.vercel.app/api/detail/${id}`,
     {
       cache: "no-store",
       headers: {},
