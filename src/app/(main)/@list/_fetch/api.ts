@@ -4,7 +4,7 @@ export const fetchData = async (category: string) => {
   console.log("server");
   try {
     const res = await fetch(
-      `https://dev-blog-mu-ashen.vercel.app/api/list?category=${category}`,
+      `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/list?category=${category}`,
       {
         cache: "no-store",
         headers: {},

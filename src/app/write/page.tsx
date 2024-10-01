@@ -29,7 +29,7 @@ export default function Write() {
 
     try {
       const response = await fetch(
-        `https://dev-blog-mu-ashen.vercel.app/api/post/new`,
+        `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/post/new`,
         {
           method: "POST",
           headers: {

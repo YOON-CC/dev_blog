@@ -17,7 +17,7 @@ export default function TagBar() {
     const fetchCategories = async () => {
       try {
         const res = await fetch(
-          `https://dev-blog-mu-ashen.vercel.app/api/category`,
+          `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/category`,
           {
             cache: "no-store",
           }
