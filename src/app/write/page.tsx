@@ -12,7 +12,7 @@ export default function Write() {
   const [phrase, setPhrase] = useState("");
 
   const [category, setCategory] = useState("");
-  const [categories, setCategories] = useState<string[]>([]);
+  const [categories, setCategories] = useState<string[]>(["All"]);
   const [content, setContent] = useState<string | undefined>(""); // MDEditor의 기본값은 undefined 허용
 
   const addCategory = () => {
@@ -44,7 +44,7 @@ export default function Write() {
         alert("글 작성 완료");
         setTitle("");
         setPhrase("");
-        setCategories([]);
+        setCategories(["All"]);
         setContent("");
       } else {
         alert("글 작성 실패");

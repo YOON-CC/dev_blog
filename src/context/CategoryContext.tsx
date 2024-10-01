@@ -14,8 +14,8 @@ const CategoryContext = createContext<CategoryContextType | undefined>(
 export const CategoryProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [category, setCategory] = useState<string>("JavaScript"); // 기본 카테고리
-
+  const [category, setCategory] = useState<string>("All"); // 기본 카테고리
+  console.log(category);
   return (
     <CategoryContext.Provider value={{ category, setCategory }}>
       {children}

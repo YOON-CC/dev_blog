@@ -1,23 +1,22 @@
+"use client";
+
 import PostList from "@/components/view/PostList";
 import { useCategory } from "@/context/CategoryContext";
+import { useEffect, useState } from "react";
+import { fetchData } from "@/app/(main)/@list/_fetch/api"; // API 호출 함수 import
 
-async function getPostList(category: any) {
-  const res = await fetch(
-    `http://localhost:3000/api/list?category=${category}`,
-    {
-      cache: "no-store",
-      headers: {},
-    }
-  );
+export default function Page() {
+  const { category } = useCategory();
+  const [postList, setPostList] = useState<any[]>([]); // 게시글 목록 상태
 
-  const data = await res.json();
-  return data;
-}
+  useEffect(() => {
+    const loadPosts = async () => {
+      const posts = await fetchData(category);
+      setPostList(posts);
+    };
 
-// export default async function Page({ searchParams }) {
-export default async function Page() {
-  // const { category } = searchParams; // 쿼리 문자열에서 category 가져오기
-  const postList = await getPostList("JavaScript");
+    loadPosts();
+  }, [category]);
 
   return (
     <section>

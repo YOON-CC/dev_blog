@@ -1,4 +1,4 @@
-import MarkDwonViewer from "@/components/view/MarkDownViewr";
+import MarkDwonViewer from "@/components/view/MarkDownViewer";
 import PostFooter from "@/components/layout/PostFooter";
 
 async function getDetailInfo(id: any) {
@@ -39,14 +39,16 @@ export default async function Page(props: any) {
         </h1>
 
         <div className="flex flex-wrap gap-2 mt-4 ">
-          {result.post.categories.map((tag: any, index: any) => (
-            <span
-              key={index}
-              className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm mt-1 dark:bg-[#1D1D1D] dark:text-[#d9d9d9]"
-            >
-              {tag}
-            </span>
-          ))}
+          {result.post.categories
+            .filter((tag: string) => tag !== "All")
+            .map((tag: any, index: any) => (
+              <span
+                key={index}
+                className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm mt-1 dark:bg-[#1D1D1D] dark:text-[#d9d9d9]"
+              >
+                {tag}
+              </span>
+            ))}
         </div>
         <div className="w-full bg-gray-100 p-4 mt-10 rounded-2xl dark:bg-[#1D1D1D] dark:text-[#d9d9d9]">
           &quot;{result.post.phrase}&quot;

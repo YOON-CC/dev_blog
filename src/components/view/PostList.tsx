@@ -9,25 +9,6 @@ interface Props {
 }
 
 export default function PostList({ postList }: Props) {
-  // console.log("몽고 db에서 받은 postList", postList);
-  // const generatePosts = () => {
-  //   return Array.from({ length: 50 }, (_, index) => ({
-  //     id: index + 1,
-  //     title: `Post ${
-  //       index + 1
-  //     }ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ`,
-  //     hashtags: [
-  //       `#Category0${(index % 5) + 1}`,
-  //       `#Category1${(index % 5) + 1}`,
-  //       `#Category2${(index % 5) + 1}`,
-  //     ],
-  //     date: `2024-09-${String((index % 30) + 1).padStart(2, "0")}`,
-  //     imageUrl: banner, // Use the image URL directly
-  //   }));
-  // };
-
-  // const posts = generatePosts();
-
   return (
     <article
       className="h-screen"
@@ -64,15 +45,17 @@ export default function PostList({ postList }: Props) {
                 <div>
                   {/* Hashtags */}
                   <ul className="flex flex-wrap mb-2 list-none p-0 m-0">
-                    {post.categories.map((tag: any, index: any) => (
-                      <li
-                        key={index}
-                        className="text-black text-sm mr-2 mb-2 bg-[#e3e3e3] rounded-[5px] px-[8px] text-[10px] shadow-md "
-                        style={{ whiteSpace: "nowrap" }}
-                      >
-                        {tag}
-                      </li>
-                    ))}
+                    {post.categories
+                      .filter((tag: string) => tag !== "All")
+                      .map((tag: any, index: any) => (
+                        <li
+                          key={index}
+                          className="text-black text-sm mr-2 mb-2 bg-[#e3e3e3] rounded-[5px] px-[8px] text-[10px] shadow-md "
+                          style={{ whiteSpace: "nowrap" }}
+                        >
+                          {tag}
+                        </li>
+                      ))}
                   </ul>
                   {/* Title */}
                   <h2 className="text-xl font-bold mt-2 break-words dark:text-[#ffffff]">
