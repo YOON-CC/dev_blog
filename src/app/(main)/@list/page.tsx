@@ -19,7 +19,7 @@ export default function Page() {
   }, [category]);
 
   return (
-    <section className="flex flex-col justify-center items-center">
+    <section className="flex flex-col items-center">
       <PostList postList={postList} />
     </section>
   );
