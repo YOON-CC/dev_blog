@@ -5,7 +5,7 @@ import banner from "@/assets/images/banner2.png";
 import Link from "next/link";
 import utcToKst from "@/utils/utcToKst";
 import SocialBtn from "../ui/SocialBtn";
-import TagBar from "../layout/TagBar";
+// import TagBar from "../layout/TagBar";
 
 interface Props {
   postList: any;
@@ -16,7 +16,7 @@ export default function PostList({ postList }: Props) {
     <article className="w-[90%] xl:w-[750px] mx-5 h-fit">
       <div className="xl:hidden pt-4 pb-6">
         <SocialBtn />
-        <TagBar />
+        {/* <TagBar /> */}
       </div>
 
       <div className="grid grid-cols-1 gap-8">

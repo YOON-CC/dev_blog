@@ -11,12 +11,10 @@ export default function Layout({ children, list, post }: Props) {
       {children}
       <main className="flex justify-center mt-[20px]">
         <SideProfile />
-        <CategoryProvider>
-          {list}
-          <div className="hidden xl:block">
-            <TagBar />
-          </div>
-        </CategoryProvider>
+        {/* <CategoryProvider> */}
+        {list}
+        <div className="hidden xl:block">{/* <TagBar /> */}</div>
+        {/* </CategoryProvider> */}
       </main>
     </Fragment>
   );
