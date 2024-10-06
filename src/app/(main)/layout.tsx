@@ -12,7 +12,7 @@ export default function Layout({ children, list, post }: Props) {
       <main className="flex justify-center mt-[20px]">
         <SideProfile />
         {/* <CategoryProvider> */}
-        {list}
+        {/* {list} */}
         <div className="hidden xl:block">{/* <TagBar /> */}</div>
         {/* </CategoryProvider> */}
       </main>
