@@ -2,7 +2,6 @@
 
 import MainBanner from "@/components/ui/MainBanner";
 import { useEffect, useState } from "react";
-import { fetchData } from "./@list/_fetch/api";
 import PostList from "@/components/view/PostList";
 
 export default function Home() {
@@ -17,21 +16,14 @@ export default function Home() {
   //   loadPosts();
   // }, [category]);
 
-  useEffect(() => {
-    const loadPosts = async () => {
-      const posts = await fetchData("JavaScript");
-      setPostList(posts);
-    };
+  // useEffect(() => {
+  //   const loadPosts = async () => {
+  //     const posts = await fetchData("JavaScript");
+  //     setPostList(posts);
+  //   };
 
-    loadPosts();
-  }, []);
+  //   loadPosts();
+  // }, []);
 
-  return (
-    <>
-      <MainBanner />
-      <section className="flex flex-col items-center">
-        <PostList postList={postList} />
-      </section>
-    </>
-  );
+  return <MainBanner />;
 }

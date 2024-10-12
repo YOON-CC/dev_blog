@@ -3,7 +3,7 @@
 import PostList from "@/components/view/PostList";
 // import { useCategory } from "@/context/CategoryContext";
 import { useEffect, useState } from "react";
-import { fetchData } from "@/app/(main)/@list/_fetch/api"; // API 호출 함수 import
+// import { fetchData } from "@/app/(main)/@list/_fetch/api"; // API 호출 함수 import
 
 export default function Page() {
   // const { category } = useCategory();
@@ -18,18 +18,18 @@ export default function Page() {
   //   loadPosts();
   // }, [category]);
 
-  useEffect(() => {
-    const loadPosts = async () => {
-      const posts = await fetchData("JavaScript");
-      setPostList(posts);
-    };
+  // useEffect(() => {
+  //   const loadPosts = async () => {
+  //     const posts = await fetchData("JavaScript");
+  //     setPostList(posts);
+  //   };
 
-    loadPosts();
-  }, []);
+  //   loadPosts();
+  // }, []);
 
   return (
     <section className="flex flex-col items-center">
-      <PostList postList={postList} />
+      {/* <PostList postList={postList} /> */}
     </section>
   );
 }
