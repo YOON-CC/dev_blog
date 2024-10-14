@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import PostList from "@/components/view/PostList";
 import { fetchData } from "@/app/(main)/_fetch/api";
+import Link from "next/link";
 
 type CategoryType = {
   _id: string;
@@ -74,7 +75,60 @@ export default function Page() {
       </aside>
       {/* 리스트 */}
       <article className="flex flex-col items-center">
-        <PostList postList={postList} />
+        {/* <PostList postList={postList} /> */}
+     <div className="grid grid-cols-1 gap-8">
+        {postList.map((post: any)=>(
+          <Link
+            href={`/post/${post._id}`}
+            key={post._id}
+            className=" bg-white p-4 rounded-lg shadow-md xl:flex xl:h-52 transition-transform duration-300 ease-in-out cursor-pointer justify-between dark:bg-[#1D1D1D] hover:bg-[#e1e1e1] dark:hover:bg-[#272727]"
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "scale(1.01)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "scale(1)";
+            }}
+          >
+            {/* Left Side */}
+            <div className="w-[100%] flex flex-col justify-between xl:w-[48%]">
+              <div>
+                {/* Hashtags */}
+                {/* <ul className="flex flex-wrap mb-2 list-none p-0 m-0">
+                  {post.categories
+                    .filter((tag: string) => tag !== "All")
+                    .map((tag: any, index: any) => (
+                      <li
+                        key={index}
+                        className="text-black text-sm mr-2 mb-2 bg-[#e3e3e3] rounded-[5px] px-[8px] text-[10px] shadow-md "
+                        style={{ whiteSpace: "nowrap" }}
+                      >
+                        {tag}
+                      </li>
+                    ))}
+                </ul> */}
+                {/* Title */}
+                <h2 className="text-xl font-bold mt-2 break-words dark:text-[#ffffff]">
+                  {post.title}
+                </h2>
+              </div>
+              {/* Date */}
+              <p className="text-gray-500 text-sm dark:text-[#bebebe] mt-2 xl:mt-0">
+                {/* {utcToKst(post.createdAt)} */}
+              </p>
+            </div>
+            {/* Right Side - Image */}
+            <div className="relative w-[100%] h-44 xl:w-[48%]  mt-4 xl:mt-0">
+              {/* <Image
+                src={post.thumbnail}
+                width={200}
+                height={200}
+                alt="Profile Picture"
+                className="rounded-lg w-[100%] h-[100%]"
+              /> */}
+            </div>
+          </Link>
+        ))}
+      </div>
       </article>
 
       {/* 카테고리-xl 사이즈일 때*/}
