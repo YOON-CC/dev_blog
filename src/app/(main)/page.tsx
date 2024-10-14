@@ -27,6 +27,7 @@ export default function Page() {
       setPostList(res);
       
       console.log("체크포인트3");
+      alert("불러옴")
     };
 
     loadPosts();
@@ -75,6 +76,7 @@ export default function Page() {
           ))}
         </div>
       </aside>
+
       {/* 리스트 */}
       <article className="flex flex-col items-center">
         <PostList postList={postList} />
