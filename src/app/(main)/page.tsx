@@ -76,7 +76,6 @@ export default function Page() {
       {/* 리스트 */}
       <article className="flex flex-col items-center">
         {/* <PostList postList={postList} /> */}
-     <div className="grid grid-cols-1 gap-8">
         {postList.map((post: any)=>(
           <Link
             href={`/post/${post._id}`}
@@ -89,46 +88,9 @@ export default function Page() {
               e.currentTarget.style.transform = "scale(1)";
             }}
           >
-            {/* Left Side */}
-            <div className="w-[100%] flex flex-col justify-between xl:w-[48%]">
-              <div>
-                {/* Hashtags */}
-                {/* <ul className="flex flex-wrap mb-2 list-none p-0 m-0">
-                  {post.categories
-                    .filter((tag: string) => tag !== "All")
-                    .map((tag: any, index: any) => (
-                      <li
-                        key={index}
-                        className="text-black text-sm mr-2 mb-2 bg-[#e3e3e3] rounded-[5px] px-[8px] text-[10px] shadow-md "
-                        style={{ whiteSpace: "nowrap" }}
-                      >
-                        {tag}
-                      </li>
-                    ))}
-                </ul> */}
-                {/* Title */}
-                <h2 className="text-xl font-bold mt-2 break-words dark:text-[#ffffff]">
-                  {post.title}
-                </h2>
-              </div>
-              {/* Date */}
-              <p className="text-gray-500 text-sm dark:text-[#bebebe] mt-2 xl:mt-0">
-                {/* {utcToKst(post.createdAt)} */}
-              </p>
-            </div>
-            {/* Right Side - Image */}
-            <div className="relative w-[100%] h-44 xl:w-[48%]  mt-4 xl:mt-0">
-              {/* <Image
-                src={post.thumbnail}
-                width={200}
-                height={200}
-                alt="Profile Picture"
-                className="rounded-lg w-[100%] h-[100%]"
-              /> */}
-            </div>
+            <p>{post.title}</p>
           </Link>
         ))}
-      </div>
       </article>
 
       {/* 카테고리-xl 사이즈일 때*/}
