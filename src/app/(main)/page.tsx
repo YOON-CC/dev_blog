@@ -18,8 +18,10 @@ export default function Page() {
   const [postList, setPostList] = useState<any[]>([]); // 게시글 목록 상태
 
   useEffect(() => {
+    
     const loadPosts = async () => {
-      console.log("체크포인트1");
+      const startTime = Date.now(); // 시작 시간 기록
+      console.log("api호출:", Date.now() - startTime, "ms");
 
       // const res = await fetchData(category);
       const res = await fetch(
@@ -29,12 +31,11 @@ export default function Page() {
           }
       );
 
-      console.log("체크포인트2");
       const data = await res.json();
-      alert("받아옴")
+      console.log("api마감:", Date.now() - startTime, "ms");
+      
       setPostList(data);
       
-      console.log("체크포인트3");
     };
 
     loadPosts();
