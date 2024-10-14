@@ -1,6 +1,5 @@
 "use client";
 
-import { useCategory } from "@/context/CategoryContext";
 import { useEffect, useState } from "react";
 
 type CategoryType = {
@@ -10,7 +9,7 @@ type CategoryType = {
 };
 
 export default function TagBar() {
-  const { category, setCategory } = useCategory();
+  const [category, setCategory] = useState('All')
   const [categoryList, setCategoryList] = useState<CategoryType[]>([]);
 
   useEffect(() => {
