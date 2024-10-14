@@ -5,7 +5,7 @@ import { IoIosArrowForward } from "react-icons/io";
 export default function PostFooter() {
   return (
     <footer className="flex justify-center py-24">
-      <div className="w-[100%] xl:w-[600px]">
+      <div className="w-[100%] xl:w-[750px]">
         <div className="flex items-center dark:text-[#ffffff]">
           <Image
             src={chan}
@@ -19,7 +19,7 @@ export default function PostFooter() {
             <div className="text-[13px]">과정은 복잡하되, 결과는 단순하게</div>
           </div>
         </div>
-        <hr className="mt-4" />
+        <hr className="mt-4"/>
         <div className="flex flex-col justify-center items-center mt-4 text-[11px] dark:text-[#ffffff]">
           <div>Thank You for Visiting My Blog, Have a Good Day 😆</div>
           <div>ⓒYoonchan Cho</div>

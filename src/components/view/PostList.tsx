@@ -16,7 +16,6 @@ export default function PostList({ postList }: Props) {
     <article className="w-[90%] xl:w-[750px] mx-5 h-fit">
       <div className="xl:hidden pt-4 pb-6">
         <SocialBtn />
-        {/* <TagBar /> */}
       </div>
 
       <div className="grid grid-cols-1 gap-8">
@@ -61,18 +60,18 @@ export default function PostList({ postList }: Props) {
                 </div>
                 {/* Date */}
                 <p className="text-gray-500 text-sm dark:text-[#bebebe] mt-2 xl:mt-0">
-                  {/* {utcToKst(post.createdAt)} */}
+                  {utcToKst(post.createdAt)}
                 </p>
               </div>
               {/* Right Side - Image */}
               <div className="relative w-[100%] h-44 xl:w-[48%]  mt-4 xl:mt-0">
-                {/* <Image
+                <Image
                   src={post.thumbnail}
                   width={200}
                   height={200}
                   alt="Profile Picture"
                   className="rounded-lg w-[100%] h-[100%]"
-                /> */}
+                />
               </div>
             </Link>
           ))}
