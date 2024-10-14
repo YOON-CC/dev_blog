@@ -18,15 +18,32 @@ export default function Page() {
   const [postList, setPostList] = useState<any[]>([]); // 게시글 목록 상태
 
   useEffect(() => {
-    const loadPosts = async () => {
-      console.log("체크포인트1");
+    // const loadPosts = async () => {
+    //   console.log("체크포인트1");
 
-      const res = await fetchData(category);
-      console.log("체크포인트2");
+    //   const res = await fetchData(category);
+    //   console.log("체크포인트2");
 
-      setPostList(res);
+    //   setPostList(res);
       
-      console.log("체크포인트3");
+    //   console.log("체크포인트3");
+    // };
+
+    // loadPosts();
+    const loadPosts = async () => {
+      try {
+        const res : any = await fetch(
+        `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/list?category=${category}`,
+          {
+            cache: "no-store",
+          }
+        );
+        const data: any = await res.json();
+
+        setPostList(data);
+      } catch (error) {
+        console.error("Failed to fetch categories:", error);
+      }
     };
 
     loadPosts();
