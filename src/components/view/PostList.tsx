@@ -22,8 +22,8 @@ export default function PostList({ postList }: Props) {
       {/* test */}
       <div className="grid grid-cols-1 gap-8">
         {postList.map((post: any)=>(
-          <Link
-            href={`/post/${post._id}`}
+          <div
+            // href={`/post/${post._id}`}
             key={post._id}
             className=" bg-white p-4 rounded-lg shadow-md xl:flex xl:h-52 transition-transform duration-300 ease-in-out cursor-pointer justify-between dark:bg-[#1D1D1D] hover:bg-[#e1e1e1] dark:hover:bg-[#272727]"
             onMouseEnter={(e) => {
@@ -70,7 +70,7 @@ export default function PostList({ postList }: Props) {
                 className="rounded-lg w-[100%] h-[100%]"
               /> */}
             </div>
-          </Link>
+          </div>
         ))}
       </div>
 
