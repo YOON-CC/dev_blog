@@ -25,6 +25,7 @@ export default function Page() {
       console.log("체크포인트2");
 
       setPostList(res);
+      
       console.log("체크포인트3");
     };
 
@@ -77,8 +78,7 @@ export default function Page() {
       <article className="flex flex-col items-center">
         {/* <PostList postList={postList} /> */}
         {postList.map((post: any)=>(
-          <Link
-            href={`/post/${post._id}`}
+          <div
             key={post._id}
             className=" bg-white p-4 rounded-lg shadow-md xl:flex xl:h-52 transition-transform duration-300 ease-in-out cursor-pointer justify-between dark:bg-[#1D1D1D] hover:bg-[#e1e1e1] dark:hover:bg-[#272727]"
             onMouseEnter={(e) => {
@@ -89,7 +89,7 @@ export default function Page() {
             }}
           >
             <p>{post.title}</p>
-          </Link>
+          </div>
         ))}
       </article>
 
