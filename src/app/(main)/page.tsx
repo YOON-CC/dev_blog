@@ -21,13 +21,20 @@ export default function Page() {
     const loadPosts = async () => {
       console.log("체크포인트1");
 
-      const res = await fetchData(category);
-      console.log("체크포인트2");
+      // const res = await fetchData(category);
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/list?category=${category}`,
+          {
+            cache: "no-store",
+          }
+      );
 
-      setPostList(res);
+      console.log("체크포인트2");
+      const data = await res.json();
+      alert("받아옴")
+      setPostList(data);
       
       console.log("체크포인트3");
-      alert("불러옴")
     };
 
     loadPosts();
