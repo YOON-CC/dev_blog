@@ -37,7 +37,7 @@ export default function PostList({ postList }: Props) {
             <div className="w-[100%] flex flex-col justify-between xl:w-[48%]">
               <div>
                 {/* Hashtags */}
-                <ul className="flex flex-wrap mb-2 list-none p-0 m-0">
+                {/* <ul className="flex flex-wrap mb-2 list-none p-0 m-0">
                   {post.categories
                     .filter((tag: string) => tag !== "All")
                     .map((tag: any, index: any) => (
@@ -49,7 +49,7 @@ export default function PostList({ postList }: Props) {
                         {tag}
                       </li>
                     ))}
-                </ul>
+                </ul> */}
                 {/* Title */}
                 <h2 className="text-xl font-bold mt-2 break-words dark:text-[#ffffff]">
                   {post.title}
