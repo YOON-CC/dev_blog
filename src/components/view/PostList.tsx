@@ -61,18 +61,18 @@ export default function PostList({ postList }: Props) {
                 </div>
                 {/* Date */}
                 <p className="text-gray-500 text-sm dark:text-[#bebebe] mt-2 xl:mt-0">
-                  {utcToKst(post.createdAt)}
+                  {/* {utcToKst(post.createdAt)} */}
                 </p>
               </div>
               {/* Right Side - Image */}
               <div className="relative w-[100%] h-44 xl:w-[48%]  mt-4 xl:mt-0">
-                <Image
+                {/* <Image
                   src={post.thumbnail}
                   width={200}
                   height={200}
                   alt="Profile Picture"
                   className="rounded-lg w-[100%] h-[100%]"
-                />
+                /> */}
               </div>
             </Link>
           ))}
