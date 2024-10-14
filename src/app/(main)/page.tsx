@@ -76,21 +76,7 @@ export default function Page() {
       </aside>
       {/* 리스트 */}
       <article className="flex flex-col items-center">
-        {/* <PostList postList={postList} /> */}
-        {postList.map((post: any)=>(
-          <div
-            key={post._id}
-            className=" bg-white p-4 rounded-lg shadow-md xl:flex xl:h-52 transition-transform duration-300 ease-in-out cursor-pointer justify-between dark:bg-[#1D1D1D] hover:bg-[#e1e1e1] dark:hover:bg-[#272727]"
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "scale(1.01)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "scale(1)";
-            }}
-          >
-            <p>{post.title}</p>
-          </div>
-        ))}
+        <PostList postList={postList} />
       </article>
 
       {/* 카테고리-xl 사이즈일 때*/}
