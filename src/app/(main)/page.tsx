@@ -23,20 +23,20 @@ export default function Page() {
       const startTime = Date.now(); // 시작 시간 기록
       console.log("api 호출:", Date.now() - startTime, "ms");
 
-      // const res = await fetchData(category);
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/list?category=${category}`,
-          // {
-          //   cache: "no-store",
-          // }
-      );
+      const res = await fetchData(category);
+      // const res = await fetch(
+      //   `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/list?category=${category}`,
+      //     {
+      //       cache: "no-store",
+      //     }
+      // );
       console.log("api받아왔을때:", Date.now() - startTime, "ms");
 
-      const data = await res.json();
+      // const data = await res.json();
 
       console.log("api 마감:", Date.now() - startTime, "ms");
       
-      setPostList(data);
+      setPostList(res);
       
     };
 
