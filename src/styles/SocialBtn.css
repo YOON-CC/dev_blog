@@ -2,22 +2,20 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
 }
 
-.icon-list {
+/* .icon-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
   gap: 15px;
   cursor: pointer;
-  /* background-color: blue; */
-  width: 100%;
-  justify-content: space-evenly;
+
   padding-left: 3rem;
   padding-right: 3rem;
-}
+} */
 
 .icon-item-one {
   display: inline-block;
@@ -26,6 +24,7 @@ nav {
   border: 2px solid black;
   border-radius: 50%;
   transition: background-color 0.3s ease, border-color 0.3s ease;
+  margin-right: 15px;
 }
 
 .icon-item-one svg {
@@ -52,6 +51,8 @@ nav {
   border: 2px solid black;
   border-radius: 50%;
   transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-right: 15px;
+
 }
 
 .icon-item-two svg {

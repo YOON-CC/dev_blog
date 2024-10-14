@@ -8,8 +8,11 @@ export default function Layout({ children}: Props) {
   return (
     <Fragment>
       <MainBanner />
-      <main className="flex justify-center mt-[20px]">
-        <SideProfile />
+      {/* <main className="flex justify-center mt-[20px]"> */}
+      <main className="flex justify-center mt-[170px]">
+
+        {/* <SideProfile /> */}
+      <aside className="hidden xl:block z-10 w-[300px] h-[550px] rounded-lg sticky top-[100px] "></aside>
         {children}
       </main>
     </Fragment>

@@ -36,7 +36,11 @@ export default function Page() {
 
       console.log("api 마감:", Date.now() - startTime, "ms");
       
-      setPostList(res);
+      
+      // const duplicatedPosts = Array(5).fill(res).flat();
+      // setPostList(duplicatedPosts);
+
+      setPostList(res)
       
     };
 
@@ -110,6 +114,7 @@ export default function Page() {
           ))}
         </div>
       </aside>
+      
     </section>
   );
 }

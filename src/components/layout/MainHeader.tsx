@@ -3,7 +3,6 @@ import TypingUi from "@/components/ui/TypingUi";
 import chan from "@/assets/images/chan.jpg";
 import Image from "next/image";
 export default function MainHeader() {
-  console.log("rsc");
   return (
     <header className="flex justify-between items-center border-b border-[#e3e3e3] dark:border-black sticky top-0 z-50 font-sans bg-[rgba(255,255,255,0.7)] dark:bg-[#121212ec] backdrop-blur-md text-black dark:text-white h-12 xl:px-12 px-4">
       {/* 헤더 */}
