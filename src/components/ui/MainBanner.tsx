@@ -32,17 +32,29 @@ export default function MainBanner() {
       </div>
 
       <div className="flex items-center justify-between w-[750px] mt-[15px]">
-        <img
-          className="animate-fadeInLeft w-[500px] rounded-[10px] shadow-lg"
-          src="https://images.unsplash.com/photo-1649180559928-91d16a63bd39?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8M2QlMjAlRUMlOTUlODQlRUMlOUQlQjQlRUMlQkQlOTh8ZW58MHx8MHx8fDA%3D"
-          alt="main image"
-        />
-        <div className="w-[230px] h-[340px] flex flex-col justify-between">
+        <div
+          className="flex items-center justify-center w-[490px] h-[340px] bg-black shadow-lg rounded-[10px] animate-fadeInLeft"
+          style={{
+            background: "linear-gradient(to right, #ff7e5f, #feb47b)"
+          }}
+        >
           <img
-            className="animate-fadeInTop w-full rounded-[10px] shadow-lg"
-            src="https://thumb17.iclickart.co.kr/Thumb17/16930000/16928468.jpg"
-            alt="image1"
+          className="w-[300px] h-[300px]"
+            src='/banner1.png'
+            alt="main image"
           />
+        </div>
+        <div className="w-[230px] h-[340px] flex flex-col justify-between">
+          <div className="animate-fadeInTop rounded-[10px] "    
+            style={{
+              background: "linear-gradient(to bottom, #d4ed66, #b3f255)"
+            }}>
+            <img
+              className="w-full shadow-lg"
+              src="/banner2.png"
+              alt="image1"
+            />
+          </div>
           <img
             className="animate-fadeInTop w-full rounded-[10px] shadow-lg"
             src="https://vrthumb.imagetoday.co.kr/2022/12/15/tid316t002793.jpg"
