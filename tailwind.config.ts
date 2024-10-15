@@ -28,11 +28,16 @@ const config: Config = {
           '0%': { opacity: '0'},
           '100%': { opacity: '1'},
         },
+        fadeInBottom: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
       animation: {
         fadeInLeft: 'fadeInLeft 1s ease-in-out',
         fadeInTop: 'fadeInTop 1s ease-in-out',
         fadeIn: 'fadeIn 1s ease-in-out',
+        fadeInBottom: 'fadeInBottom 1s ease-in-out',
 
       },
     },

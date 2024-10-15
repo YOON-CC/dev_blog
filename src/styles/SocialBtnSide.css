@@ -1,0 +1,107 @@
+.side-icon-list-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding-bottom: 15px; */
+}
+
+.side-icon-item-one {
+  display: inline-block;
+  padding: 6px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.side-icon-item-one svg {
+  width: 30px;
+  height: 30px;
+  fill: black;
+  transition: fill 0.3s ease;
+}
+
+.side-icon-item-one:hover {
+  background-color: black;
+  border-color: black;
+  box-shadow: 0px 0px 3px 1px rgb(140, 140, 140);
+}
+
+.side-icon-item-one:hover svg {
+  fill: white;
+}
+
+.side-icon-item-two {
+  display: inline-block;
+  padding: 6px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  margin-top: 15px;
+
+}
+
+.side-icon-item-two svg {
+  width: 30px;
+  height: 30px;
+  transition: fill 0.3s ease;
+}
+
+.side-icon-item-two-path1 {
+  fill: black;
+}
+
+.side-icon-item-two-path2 {
+  fill: white;
+}
+
+.side-icon-item-two:hover {
+  background-color: red;
+  border-color: red;
+  box-shadow: 0px 0px 3px 1px rgb(255, 164, 164);
+}
+
+.side-icon-item-two:hover .side-icon-item-two-path1 {
+  fill: white;
+}
+
+.side-icon-item-two:hover .side-icon-item-two-path2 {
+  fill: red;
+}
+
+.side-icon-item-three {
+  display: inline-block;
+  padding: 6px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  margin-top: 10px;
+
+}
+
+.side-icon-item-three svg {
+  width: 30px;
+  height: 30px;
+  transition: fill 0.3s ease;
+}
+
+.side-icon-item-three-path1,
+.side-icon-item-three-path2,
+.side-icon-item-three-path3 {
+  fill: black;
+}
+
+.side-icon-item-three:hover {
+  background-color: #0a66c2;
+  border-color: #0a66c2;
+  box-shadow: 0px 0px 3px 1px #8ed0ff;
+}
+
+.side-icon-item-three:hover .side-icon-item-three-path1,
+.side-icon-item-three:hover .side-icon-item-three-path2,
+.side-icon-item-three:hover .side-icon-item-three-path3 {
+  fill: white;
+}

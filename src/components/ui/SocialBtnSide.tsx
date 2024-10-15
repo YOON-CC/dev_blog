@@ -1,12 +1,12 @@
-import "@/styles/SocialBtn.css";
+import "@/styles/SocialBtnSide.css";
 import Link from "next/link";
 
-export default function SocialBtn() {
+export default function SocialBtnSide() {
   return (
-    <nav >
-      <ul className="icon-list">
+    <nav className="side-icon-list">
+      <ul className="side-icon-list-ul">
         {/* 깃허브 */}
-        <li className="icon-item-one">
+        <li className="side-icon-item-one">
           <Link href={"https://github.com/YOON-CC"}>
             <svg
               enableBackground="new 0 0 512 512"
@@ -21,7 +21,7 @@ export default function SocialBtn() {
           </Link>
         </li>
         {/* 유튜브 */}
-        <li className="icon-item-two">
+        <li className="side-icon-item-two">
           <Link href={"https://www.youtube.com/@yooncc"}>
             <svg height="24" version="1.1" viewBox="0 0 24 24" width="24">
               <rect
@@ -34,11 +34,11 @@ export default function SocialBtn() {
               />
               <g>
                 <path
-                  className="icon-item-two-path1"
+                  className="side-icon-item-two-path1"
                   d="M2.093,9.075c0.125,-1.941 1.629,-3.509 3.562,-3.716c2.005,-0.202 4.136,-0.311 6.345,-0.311c2.209,0 4.34,0.109 6.345,0.312c1.933,0.206 3.437,1.774 3.562,3.715c0.061,0.956 0.093,1.933 0.093,2.925c0,0.992 -0.032,1.969 -0.093,2.925c-0.125,1.941 -1.629,3.509 -3.562,3.716c-2.005,0.202 -4.136,0.311 -6.345,0.311c-2.209,0 -4.34,-0.109 -6.345,-0.312c-1.933,-0.206 -3.437,-1.774 -3.562,-3.715c-0.061,-0.956 -0.093,-1.933 -0.093,-2.925Z"
                 />
                 <path
-                  className="icon-item-two-path2"
+                  className="side-icon-item-two-path2"
                   d="M15.055,12l-4.909,2.995l0,-5.99l4.909,2.995Z"
                 />
               </g>
@@ -46,7 +46,7 @@ export default function SocialBtn() {
           </Link>
         </li>
         {/* 링크드인 */}
-        <li className="icon-item-three">
+        <li className="side-icon-item-three">
           <Link
             href={
               "https://www.linkedin.com/in/%EC%9C%A4%EC%B0%AC-%EC%A1%B0-8a6581276/"
@@ -61,15 +61,15 @@ export default function SocialBtn() {
             >
               <g transform="scale(0.7) translate(128, 128)">
                 <path
-                  className="icon-item-three-path1"
+                  className="side-icon-item-three-path1"
                   d="M173.5,508.7c0-2.4,0-4.7,0-7c0-107.7,0-215.3,0-323c0-3-0.2-5.4,4.2-5.4c31.8,0.2,63.7,0.1,95.5,0.1   c0.8,0,1.6,0.2,2.9,0.4c0,14,0,27.8,0,41.7c0.4,0.1,0.7,0.3,1.1,0.4c4-5.2,7.8-10.6,12-15.7c12.2-15,27.5-26,45.5-32.6   c9.8-3.6,20.5-5.8,30.8-6.3c14.2-0.6,28.7-0.4,42.7,2c23,3.9,43.3,14.1,60.1,30.8c15.9,15.7,26.4,34.6,32.1,55.9   c3,11.3,4.9,22.9,6.7,34.4c1.2,8,1.8,16.2,1.8,24.2c0.1,65,0.1,130,0.1,195c0,1.6-0.1,3.2-0.2,5.3c-1.9,0-3.5,0-5.1,0   c-30.7,0-61.3-0.1-92,0.1c-5.1,0-6-1.7-6-6.3c0.1-59.8,0.3-119.7-0.1-179.5c-0.1-10.5-1.1-21.4-3.8-31.5   c-4.9-17.7-16.1-30.5-33.9-37c-15-5.5-30.2-6.5-45.6-2.6c-17,4.3-28.7,15.6-37.5,30.5c-6.8,11.5-8.1,24.2-8.2,36.9   c-0.4,60.7-0.2,121.3-0.2,182c0,2.3,0,4.6,0,7.1C241.9,508.7,208,508.7,173.5,508.7z"
                 />
                 <path
-                  className="icon-item-three-path2"
+                  className="side-icon-item-three-path2"
                   d="M109.1,342.6c0,53.3-0.1,106.6,0.1,159.9c0,4.8-1,6.6-6.3,6.5c-30.5-0.3-61-0.3-91.5,0c-5,0-6.1-1.7-6.1-6.3   c0.1-107.1,0.1-214.3,0-321.4c0-4.3,1.2-5.8,5.6-5.8c30.8,0.2,61.6,0.2,92.5,0c4.8,0,5.7,1.8,5.7,6.1   C109.1,235.3,109.1,289,109.1,342.6z"
                 />
                 <path
-                  className="icon-item-three-path3"
+                  className="side-icon-item-three-path3"
                   d="M56.1,4.8C89,4,108.7,27.9,108.8,57.2c0.1,30-20.9,52.4-53.9,52.3c-30.7,0-52.4-22-52.3-53.1C2.7,27.3,23.8,3.8,56.1,4.8z"
                 />
               </g>
