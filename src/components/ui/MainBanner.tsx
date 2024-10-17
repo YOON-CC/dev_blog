@@ -12,7 +12,6 @@ type CategoryType = {
 };
 
 export default function MainBanner() {
-
   return (
     <div className="hidden xl:flex w-full h-[200px] justify-center flex-col items-center mt-[250px]">
       <div className="animate-fadeInTop flex justify-between items-center w-[750px]">
@@ -24,7 +23,10 @@ export default function MainBanner() {
             height={100}
             className="rounded-full w-[50px] h-[50px]"
           />
-          <h1 className="text-[40px] font-bold ml-2 font-fantasy italic dark:text-[#FFFFFF]" style={{fontFamily:'fantasy', fontStyle:'oblique'}}>
+          <h1
+            className="text-[40px] font-bold ml-2 font-fantasy italic dark:text-[#FFFFFF]"
+            style={{ fontFamily: "fantasy", fontStyle: "oblique" }}
+          >
             LIFE IS JOURNEY
           </h1>
         </div>
@@ -35,36 +37,46 @@ export default function MainBanner() {
         <div
           className="flex items-center justify-center w-[490px] h-[340px] bg-black shadow-lg rounded-[10px] animate-fadeInLeft"
           style={{
-            background: "linear-gradient(to right, #ff7e5f, #feb47b)"
+            background: "linear-gradient(to right, #69FF97, #00E4FF)",
           }}
         >
           <img
-          className="w-[300px] h-[300px]"
-            src='/banner1.png'
+            className="w-[300px] h-[300px]"
+            src="/banner1.png"
             alt="main image"
           />
         </div>
         <div className="w-[230px] h-[340px] flex flex-col justify-between">
-          <div className="animate-fadeInTop rounded-[10px] "    
+          <div
+            className="w-[230px] h-[200px] animate-fadeInTop rounded-[10px] shadow-lg flex items-center justify-center"
             style={{
-              background: "linear-gradient(to bottom, #d4ed66, #b3f255)"
-            }}>
-            <img
-              className="w-full shadow-lg"
-              src="/banner2.png"
-              alt="image1"
-            />
+              background: "linear-gradient(77deg , #f7cff1, #FFE5E5)",
+            }}
+          >
+            <img className="w-[180px]" src="/banner2.png" alt="image1" />
           </div>
-          <img
-            className="animate-fadeInTop w-full rounded-[10px] shadow-lg"
-            src="https://vrthumb.imagetoday.co.kr/2022/12/15/tid316t002793.jpg"
-            alt="image2"
-          />
+          <div
+            className="animate-fadeInTop w-[230px] h-[100px] flex items-center justify-center shadow-lg rounded-[10px]"
+            style={{
+              background: "linear-gradient(77deg , #6BB3FF, #95DBFE)",
+            }}
+          >
+            <img className="w-[140px] " src="/banner3.png" alt="image2" />
+          </div>
         </div>
       </div>
 
       <div className="w-[750px] dark:text-[#FFFFFF]">
-        <h1 className="text-[20px] font-fantasy italic mt-[60px] animate-fadeInLeft" style={{fontFamily:'fantasy', fontStyle:'oblique', fontWeight:'bolder'}}>POST (77)</h1>
+        <h1
+          className="text-[20px] font-fantasy italic mt-[60px] animate-fadeInLeft"
+          style={{
+            fontFamily: "fantasy",
+            fontStyle: "oblique",
+            fontWeight: "bolder",
+          }}
+        >
+          POST (77)
+        </h1>
       </div>
     </div>
   );
