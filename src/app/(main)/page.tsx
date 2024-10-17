@@ -13,14 +13,12 @@ type CategoryType = {
 };
 
 export default function Page() {
-  
-  const [category, setCategory] = useState('All')
+  const [category, setCategory] = useState("All");
   const [categoryList, setCategoryList] = useState<CategoryType[]>([]);
   const [postList, setPostList] = useState<any[]>([]); // 게시글 목록 상태
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
-    
     const loadPosts = async () => {
       const startTime = Date.now(); // 시작 시간 기록
       console.log("api 호출:", Date.now() - startTime, "ms");
@@ -33,25 +31,21 @@ export default function Page() {
       //       cache: "no-store",
       //     }
       // );
-      
+
       console.log("api받아왔을때:", Date.now() - startTime, "ms");
 
       // const data = await res.json();
 
       console.log("api 마감:", Date.now() - startTime, "ms");
-      
-      
+
       const duplicatedPosts = Array(5).fill(res).flat();
       setPostList(duplicatedPosts);
 
       // setPostList(res)
-      
     };
 
     loadPosts();
-
   }, [category]);
-
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -72,7 +66,6 @@ export default function Page() {
     fetchCategories();
   }, []);
 
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -89,10 +82,8 @@ export default function Page() {
     };
   }, []);
 
-
   return (
     <section className="xl:flex">
-
       {/* 카테고리-xl 사이즈가 아닐 때*/}
       <aside className="xl:hidden flex justify-center items-center mb-[20px]">
         <div className="flex flex-wrap overflow-x-auto w-[90%] gap-[7px]">
@@ -106,13 +97,14 @@ export default function Page() {
               }`}
               onClick={() => setCategory(cat.name)}
             >
-              {cat.name === "All" ? "전체" : cat.name} {`(${cat.postIds.length})`}
+              {cat.name === "All" ? "전체" : cat.name}{" "}
+              {`(${cat.postIds.length})`}
             </div>
           ))}
         </div>
       </aside>
 
-      <SideProfile isSticky={isSticky}/>
+      <SideProfile isSticky={isSticky} />
 
       {/* 리스트 */}
       <article className="flex flex-col items-center">
@@ -120,27 +112,6 @@ export default function Page() {
       </article>
 
       {/* 카테고리-xl 사이즈일 때*/}
-      {/* <aside
-        className={`${
-          isSticky ? "block opacity-100" : "hidden opacity-0"
-        } w-[100%] xl:w-[300px] sticky top-[100px] h-fit xl:p-[20px] xl:border-l xl:border-[#e3e3e3] flex-col gap-[5px] dark:xl:border-[#1D1D1D]`}
-      >
-        <div className="hidden xl:flex flex-col gap-[5px]">
-          {categoryList.map((cat) => (
-            <div
-              key={cat._id}
-              className={`text-[16px] cursor-pointer ${
-                category === cat.name
-                  ? "font-bold text-[#00DF9C] dark:text-[#00DF9C]"
-                  : "dark:text-[#ffffff]"
-              }`}
-              onClick={() => setCategory(cat.name)}
-            >
-              {cat.name === "All" ? "전체" : cat.name} {`(${cat.postIds.length})`}
-            </div>
-          ))}
-        </div>
-      </aside> */}
       <aside
         className={`${
           isSticky ? "block opacity-100" : "hidden opacity-0"
@@ -157,7 +128,8 @@ export default function Page() {
               }`}
               onClick={() => setCategory(cat.name)}
             >
-              {cat.name === "All" ? "전체" : cat.name} {`(${cat.postIds.length})`}
+              {cat.name === "All" ? "전체" : cat.name}{" "}
+              {`(${cat.postIds.length})`}
             </div>
           ))}
         </div>
