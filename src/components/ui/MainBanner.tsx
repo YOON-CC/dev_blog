@@ -13,7 +13,7 @@ type CategoryType = {
 
 export default function MainBanner() {
   return (
-    <div className="hidden xl:flex w-full h-[200px] justify-center flex-col items-center mt-[250px]">
+    <div className="hidden xl:flex w-full h-[fit-content] justify-center flex-col items-center mt-[100px]">
       <div className="animate-fadeInTop flex justify-between items-center w-[750px]">
         <div className="flex justify-center items-center">
           <Image

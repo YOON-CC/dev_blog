@@ -2,16 +2,14 @@ import SideProfile from "@/components/layout/SideProfile";
 import { Fragment, ReactNode } from "react";
 import MainBanner from "@/components/ui/MainBanner";
 
-type Props = { children: ReactNode;};
+type Props = { children: ReactNode };
 
-export default function Layout({ children}: Props) {
+export default function Layout({ children }: Props) {
   return (
     <Fragment>
       <MainBanner />
       {/* <main className="flex justify-center mt-[20px]"> */}
-      <main className="flex justify-center mt-[170px]">
-        {children}
-      </main>
+      <main className="flex justify-center mt-[10px]">{children}</main>
     </Fragment>
   );
 }
