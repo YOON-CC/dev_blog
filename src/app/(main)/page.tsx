@@ -38,10 +38,10 @@ export default function Page() {
 
       console.log("api 마감:", Date.now() - startTime, "ms");
 
-      const duplicatedPosts = Array(5).fill(res).flat();
-      setPostList(duplicatedPosts);
+      // const duplicatedPosts = Array(5).fill(res).flat();
+      // setPostList(duplicatedPosts);
 
-      // setPostList(res)
+      setPostList(res);
     };
 
     loadPosts();

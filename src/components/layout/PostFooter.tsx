@@ -19,7 +19,7 @@ export default function PostFooter() {
             <div className="text-[13px]">과정은 복잡하되, 결과는 단순하게</div>
           </div>
         </div>
-        <hr className="mt-4"/>
+        <hr className="mt-4" />
         <div className="flex flex-col justify-center items-center mt-4 text-[11px] dark:text-[#ffffff]">
           <div>Thank You for Visiting My Blog, Have a Good Day 😆</div>
           <div>ⓒYoonchan Cho</div>

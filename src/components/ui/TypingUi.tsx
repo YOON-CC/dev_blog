@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import Image from "next/image";
 import chan from "@/assets/images/chan.jpg";
+import Link from "next/link";
 
 export default function TypingUi() {
   const [isSticky, setIsSticky] = useState(false);
@@ -26,7 +27,8 @@ export default function TypingUi() {
 
   return (
     <>
-      <div
+      <Link
+        href={"/"}
         className={`hidden xl:flex justify-center items-center transition-opacity duration-500 ${
           isSticky ? "opacity-100" : "opacity-0"
         }`}
@@ -48,7 +50,7 @@ export default function TypingUi() {
         >
           CHAN
         </div>
-      </div>
+      </Link>
 
       {!isSticky && (
         <div className={`hidden xl:flex text-sm`}>

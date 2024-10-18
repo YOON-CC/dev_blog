@@ -13,7 +13,7 @@ type CategoryType = {
 
 export default function MainBanner() {
   return (
-    <div className="hidden xl:flex w-full h-[fit-content] justify-center flex-col items-center mt-[100px]">
+    <div className="hidden xl:flex w-full h-[fit-content] justify-center flex-col items-center mt-[60px]">
       <div className="animate-fadeInTop flex justify-between items-center w-[750px]">
         <div className="flex justify-center items-center">
           <Image
@@ -37,7 +37,7 @@ export default function MainBanner() {
         <div
           className="flex items-center justify-center w-[490px] h-[340px] bg-black shadow-lg rounded-[10px] animate-fadeInLeft"
           style={{
-            background: "linear-gradient(to right, #69FF97, #00E4FF)",
+            background: "linear-gradient(77deg, #f7c7ff, #9eb9ff, #00E4FF)",
           }}
         >
           <img
@@ -50,7 +50,7 @@ export default function MainBanner() {
           <div
             className="w-[230px] h-[200px] animate-fadeInTop rounded-[10px] shadow-lg flex items-center justify-center"
             style={{
-              background: "linear-gradient(77deg , #f7cff1, #FFE5E5)",
+              background: "linear-gradient(77deg , #ddffa6, #00ffaa)",
             }}
           >
             <img className="w-[180px]" src="/banner2.png" alt="image1" />
@@ -58,7 +58,7 @@ export default function MainBanner() {
           <div
             className="animate-fadeInTop w-[230px] h-[100px] flex items-center justify-center shadow-lg rounded-[10px]"
             style={{
-              background: "linear-gradient(77deg , #6BB3FF, #95DBFE)",
+              background: "linear-gradient(77deg , #ffe599, #ddffa6)",
             }}
           >
             <img className="w-[140px] " src="/banner3.png" alt="image2" />
