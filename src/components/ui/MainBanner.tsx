@@ -23,10 +23,7 @@ export default function MainBanner() {
             height={100}
             className="rounded-full w-[50px] h-[50px]"
           />
-          <h1
-            className="text-[40px] ml-2 font-extrabold italic dark:text-[#FFFFFF]"
-            style={{ fontFamily: "fantasy" }}
-          >
+          <h1 className="text-[40px] ml-2 font-extrabold italic dark:text-[#FFFFFF]">
             LIFE IS JOURNEY
           </h1>
         </div>
