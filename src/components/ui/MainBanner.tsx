@@ -24,8 +24,8 @@ export default function MainBanner() {
             className="rounded-full w-[50px] h-[50px]"
           />
           <h1
-            className="text-[40px] font-bold ml-2 font-fantasy italic dark:text-[#FFFFFF]"
-            style={{ fontFamily: "fantasy", fontStyle: "oblique" }}
+            className="text-[40px] ml-2 font-extrabold italic dark:text-[#FFFFFF]"
+            style={{ fontFamily: "fantasy" }}
           >
             LIFE IS JOURNEY
           </h1>
@@ -67,15 +67,8 @@ export default function MainBanner() {
       </div>
 
       <div className="w-[750px] dark:text-[#FFFFFF]">
-        <h1
-          className="text-[20px] font-fantasy italic mt-[60px] animate-fadeInLeft"
-          style={{
-            fontFamily: "fantasy",
-            fontStyle: "oblique",
-            fontWeight: "bolder",
-          }}
-        >
-          POST (77)
+        <h1 className="text-[20px] font-fantasy font-extrabold italic mt-[60px] animate-fadeInLeft">
+          POST
         </h1>
       </div>
     </div>

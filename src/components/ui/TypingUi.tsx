@@ -40,16 +40,7 @@ export default function TypingUi() {
           height={100}
           className="rounded-full w-6 h-6"
         />
-        <div
-          className="ml-1"
-          style={{
-            fontFamily: "fantasy",
-            fontStyle: "oblique",
-            fontWeight: "bolder",
-          }}
-        >
-          CHAN
-        </div>
+        <div className="ml-1 font-extrabold italic">CHAN</div>
       </Link>
 
       {!isSticky && (

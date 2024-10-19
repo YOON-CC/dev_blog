@@ -42,7 +42,7 @@ export default async function Page(props: any) {
               </span>
             ))}
         </div>
-        <div className="w-full bg-gray-100 p-4 mt-6 xl:mt-10 rounded-2xl dark:bg-[#1D1D1D] dark:text-[#d9d9d9]">
+        <div className="w-full bg-gray-100 p-4 mt-6 xl:mt-6 rounded-2xl dark:bg-[#1D1D1D] dark:text-[#d9d9d9]">
           &quot;{result.post.phrase}&quot;
         </div>
       </article>
