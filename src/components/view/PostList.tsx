@@ -37,8 +37,8 @@ export default function PostList({ postList }: Props) {
               <div className="relative w-full h-44 mb-4">
                 <Image
                   src={post.thumbnail}
-                  width={200}
-                  height={200}
+                  width={300}
+                  height={300}
                   alt="Profile Picture"
                   className="rounded-lg w-full h-full object-cover"
                 />
