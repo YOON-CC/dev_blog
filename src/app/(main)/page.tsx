@@ -57,6 +57,7 @@ export default function Page() {
           }
         );
         const data: CategoryType[] = await res.json();
+        console.log(data);
         setCategoryList(data);
       } catch (error) {
         console.error("Failed to fetch categories:", error);
