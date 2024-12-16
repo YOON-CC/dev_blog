@@ -37,7 +37,6 @@ export default function Page() {
         if (!res.ok) {
           throw new Error("게시글을 가져오는 데 실패했습니다.");
         }
-        const endTime = Date.now(); // 끝 시간 기록
 
         const data = await res.json();
         setPostList(data);
@@ -63,9 +62,9 @@ export default function Page() {
           }
         );
         const data: CategoryType[] = await res.json();
+        console.log("카테고리 api마감:", Date.now() - startTime, "ms");
         console.log(data);
         setCategoryList(data);
-        console.log("카테고리 api마감:", Date.now() - startTime, "ms");
       } catch (error) {
         console.error("Failed to fetch categories:", error);
       }

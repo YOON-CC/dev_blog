@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <body className="dark:bg-[#121212]">
+      <body className="dark:bg-[#2F2F2F]">
         <DarkModeProvider>
           <MainHeader />
           {children}

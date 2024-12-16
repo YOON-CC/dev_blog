@@ -25,7 +25,7 @@ export default function PostList({ postList }: Props) {
             <Link
               href={`/post/${post._id}`}
               key={post._id}
-              className="bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 ease-in-out cursor-pointer dark:bg-[#1D1D1D] hover:bg-[#e1e1e1] dark:hover:bg-[#272727] animate-fadeInBottom"
+              className="bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 ease-in-out cursor-pointer dark:bg-[#232323] hover:bg-[#e1e1e1] dark:hover:bg-[#272727] animate-fadeInBottom"
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "scale(1.01)";
               }}
