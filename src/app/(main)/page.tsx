@@ -20,28 +20,9 @@ export default function Page() {
 
   useEffect(() => {
     const loadPosts = async () => {
-      // const startTime = Date.now(); // 시작 시간 기록
-      // console.log("api 호출:", Date.now() - startTime, "ms");
+      const startTime = Date.now(); // 시작 시간 기록
+      console.log("api 호출:", Date.now() - startTime, "ms");
 
-      // const res = await fetchData(category);
-
-      // const res = await fetch(
-      //   `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/list?category=${category}`,
-      //     {
-      //       cache: "no-store",
-      //     }
-      // );
-
-      // console.log("api받아왔을때:", Date.now() - startTime, "ms");
-
-      // const data = await res.json();
-
-      // console.log("api 마감:", Date.now() - startTime, "ms");
-
-      // const duplicatedPosts = Array(5).fill(res).flat();
-      // setPostList(duplicatedPosts);
-
-      // setPostList(res);
       try {
         const res = await fetch(
           `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/list?category=${category}`,
@@ -50,15 +31,13 @@ export default function Page() {
             headers: {},
           }
         );
+        console.log("api마감:", Date.now() - startTime, "ms");
 
-        console.log("조회횡ㄹㅊ", res);
 
         if (!res.ok) {
           throw new Error("게시글을 가져오는 데 실패했습니다.");
         }
         const endTime = Date.now(); // 끝 시간 기록
-        // console.log("api마감:", Date.now() - startTime, "ms");
-        // console.log("모든 게시글 조회 완료:", Date.now() - startTime, "ms");
 
         const data = await res.json();
         setPostList(data);
