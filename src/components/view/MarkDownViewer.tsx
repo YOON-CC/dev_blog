@@ -25,7 +25,7 @@ export default function MarkDwonViewer({ content }: Props) {
       <MDEditor.Markdown
         className={`${
           hello ? "light-markdown-preview" : "dark-markdown-preview"
-        } w-[100%] bg-white dark:bg-[#121212] text-black dark:text-[#ffffff]`}
+        } w-[100%] bg-white dark:bg-[#2F2F2F] text-black dark:text-[#ffffff]`}
         source={apple}
       />
     </div>

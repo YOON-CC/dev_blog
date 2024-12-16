@@ -25,7 +25,7 @@ export default function PostList({ postList }: Props) {
             <Link
               href={`/post/${post._id}`}
               key={post._id}
-              className="bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 ease-in-out cursor-pointer dark:bg-[#232323] hover:bg-[#e1e1e1] dark:hover:bg-[#272727] animate-fadeInBottom"
+              className="bg-white rounded-lg shadow-lg transition-transform duration-300 ease-in-out cursor-pointer dark:bg-[#232323] hover:bg-[#e1e1e1] dark:hover:bg-[#272727] animate-fadeInBottom"
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "scale(1.01)";
               }}
@@ -37,23 +37,23 @@ export default function PostList({ postList }: Props) {
               <div className="relative w-full h-44 mb-4">
                 <Image
                   src={post.thumbnail}
-                  width={300}
-                  height={300}
+                  width={500}
+                  height={500}
                   alt="Profile Picture"
-                  className="rounded-lg w-full h-full object-cover"
-                />
+                  className="rounded-tl-lg rounded-tr-lg w-full h-full object-cover"
+                  />
               </div>
 
               {/* Title and content */}
-              <div>
+              <div className="pr-6 pl-6 pb-6">
                 {/* Hashtags */}
-                <ul className="flex flex-wrap mb-2 list-none p-0 m-0">
+                <ul className="flex flex-wrap mb-2 list-none m-0">
                   {post.categories
                     .filter((tag: string) => tag !== "All")
                     .map((tag: any, index: any) => (
                       <li
                         key={index}
-                        className="text-black text-sm mr-2 mb-2 bg-[#e3e3e3] rounded-[5px] px-[8px] text-[10px] shadow-md"
+                        className="text-[#00df9c] text-sm mr-2 mb-2 rounded-[5px] px-[8px] text-[10px] border border-[#00df9c] text-center"
                         style={{ whiteSpace: "nowrap" }}
                       >
                         {tag}

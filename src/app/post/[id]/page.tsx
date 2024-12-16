@@ -22,7 +22,7 @@ export default async function Page(props: any) {
 
   return (
     <main className="w-[90%] xl:w-[750px] mx-[20px] flex flex-col justify-center items-center h-fit">
-      <article className="bg-white w-full max-w-[100%] pb-16 xl:pb-20 pt-10 xl:pt-16 dark:bg-[#121212]">
+      <article className="bg-white w-full max-w-[100%] pb-16 xl:pb-20 pt-10 xl:pt-16 dark:bg-[#2F2F2F]">
         <div className="text-gray-500 dark:text-[#c4c4c4]">
           {utcToKst(result.post.createdAt)}
         </div>

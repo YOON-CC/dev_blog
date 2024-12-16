@@ -63,6 +63,7 @@ export default function Page() {
         );
         const data: CategoryType[] = await res.json();
         console.log("카테고리 api마감:", Date.now() - startTime, "ms");
+
         console.log(data);
         setCategoryList(data);
       } catch (error) {
@@ -99,7 +100,7 @@ export default function Page() {
               key={cat._id}
               className={`text-[16px] cursor-pointer border border-gray-300 rounded-lg p-2 ${
                 category === cat.name
-                  ? "font-bold text-[#00DF9C] dark:text-[#00DF9C]"
+                  ? "font-bold text-[#00DF9C] dark:text-[#00DF9C] border-[#00DF9C]"
                   : "dark:text-white"
               }`}
               onClick={() => setCategory(cat.name)}
