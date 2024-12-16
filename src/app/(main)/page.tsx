@@ -21,7 +21,7 @@ export default function Page() {
   useEffect(() => {
     const loadPosts = async () => {
       const startTime = Date.now(); // 시작 시간 기록
-      console.log("api 호출:", Date.now() - startTime, "ms");
+      console.log("게시글 리스트 api 호출:", Date.now() - startTime, "ms");
 
       try {
         const res = await fetch(
@@ -31,7 +31,7 @@ export default function Page() {
             headers: {},
           }
         );
-        console.log("api마감:", Date.now() - startTime, "ms");
+        console.log("게시글 리스트 api마감:", Date.now() - startTime, "ms");
 
 
         if (!res.ok) {
@@ -52,6 +52,8 @@ export default function Page() {
   }, [category]);
 
   useEffect(() => {
+    const startTime = Date.now(); // 시작 시간 기록
+    console.log("카테고리 api 호출:", Date.now() - startTime, "ms");
     const fetchCategories = async () => {
       try {
         const res = await fetch(
@@ -63,6 +65,7 @@ export default function Page() {
         const data: CategoryType[] = await res.json();
         console.log(data);
         setCategoryList(data);
+        console.log("카테고리 api마감:", Date.now() - startTime, "ms");
       } catch (error) {
         console.error("Failed to fetch categories:", error);
       }
