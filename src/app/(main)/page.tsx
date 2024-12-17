@@ -18,6 +18,8 @@ export default function Page() {
   const [postList, setPostList] = useState<any[]>([]); // 게시글 목록 상태
   const [isSticky, setIsSticky] = useState(false);
 
+  const [layout, setLayout] = useState<"grid" | "block">("grid")
+  
   useEffect(() => {
     const loadPosts = async () => {
       const startTime = Date.now(); // 시작 시간 기록
@@ -48,7 +50,7 @@ export default function Page() {
     };
 
     loadPosts();
-  }, [category]);
+  }, [category, layout]);
 
   useEffect(() => {
     const startTime = Date.now(); // 시작 시간 기록
@@ -115,6 +117,8 @@ export default function Page() {
       <SideProfile isSticky={isSticky} />
 
       {/* 리스트 */}
+
+
       <article className="flex flex-col items-center">
         <PostList postList={postList} />
       </article>

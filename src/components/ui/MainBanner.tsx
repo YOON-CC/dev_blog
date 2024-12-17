@@ -5,13 +5,8 @@ import chan from "@/assets/images/chan.jpg";
 import { useEffect, useState } from "react";
 import SocialBtn from "./SocialBtn";
 
-type CategoryType = {
-  _id: string;
-  name: string;
-  postIds: string[];
-};
-
 export default function MainBanner() {
+
   return (
     <div className="hidden xl:flex w-full h-[fit-content] justify-center flex-col items-center mt-[60px]">
       <div className="animate-fadeInTop flex justify-between items-center w-[750px]">
@@ -63,12 +58,6 @@ export default function MainBanner() {
             {/* <img className="w-[140px] " src="/banner3.png" alt="image2" /> */}
           </div>
         </div>
-      </div>
-
-      <div className="w-[750px] dark:text-[#FFFFFF]">
-        <h1 className="text-[20px] font-fantasy font-extrabold italic mt-[60px] animate-fadeInLeft">
-          POST
-        </h1>
       </div>
     </div>
   );
