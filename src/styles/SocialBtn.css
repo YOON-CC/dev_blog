@@ -37,7 +37,7 @@ nav {
 .icon-item-one:hover {
   background-color: black;
   border-color: black;
-  box-shadow: 0px 0px 3px 1px rgb(140, 140, 140);
+  /* box-shadow: 0px 0px 3px 1px rgb(140, 140, 140); */
 }
 
 .icon-item-one:hover svg {
@@ -51,8 +51,7 @@ nav {
   border: 2px solid black;
   border-radius: 50%;
   transition: background-color 0.3s ease, border-color 0.3s ease;
-    margin-right: 15px;
-
+  margin-right: 15px;
 }
 
 .icon-item-two svg {
@@ -72,7 +71,7 @@ nav {
 .icon-item-two:hover {
   background-color: red;
   border-color: red;
-  box-shadow: 0px 0px 3px 1px rgb(255, 164, 164);
+  /* box-shadow: 0px 0px 3px 1px rgb(255, 164, 164); */
 }
 
 .icon-item-two:hover .icon-item-two-path1 {
@@ -107,7 +106,7 @@ nav {
 .icon-item-three:hover {
   background-color: #0a66c2;
   border-color: #0a66c2;
-  box-shadow: 0px 0px 3px 1px #8ed0ff;
+  /* box-shadow: 0px 0px 3px 1px #8ed0ff; */
 }
 
 .icon-item-three:hover .icon-item-three-path1,

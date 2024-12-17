@@ -17,12 +17,12 @@ export default function PostList({ postList }: Props) {
   return (
     <article className="w-[90%] xl:w-[750px] mx-5 h-fit">
       <div className="w-[750px] dark:text-[#FFFFFF] justify-between mt-[60px] mb-[20px] hidden xl:flex">
-        <h1 className="text-[20px] font-fantasy font-extrabold italic animate-fadeInLeft">
+        <h1 className="text-[20px] font-fantasy font-extrabold italic animate-fadeInLeft mt-[10px]">
           POST
         </h1>
         <div className="flex space-x-2">
           <button
-            className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
+            className={`px-4 pt-2 pb-1 rounded-lg font-semibold text-sm transition-all ${
               layout === "grid"
                 ? "bg-[#3a3a3a] text-white"
                 : "bg-[#efefef] dark:bg-[#232323]"
@@ -32,7 +32,7 @@ export default function PostList({ postList }: Props) {
             2 Line
           </button>
           <button
-            className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
+            className={`px-4 pt-2 pb-1 rounded-lg font-semibold text-sm transition-all ${
               layout === "block"
                 ? "bg-[#3a3a3a] text-white"
                 : "bg-[#efefef] dark:bg-[#232323]"
@@ -108,7 +108,7 @@ export default function PostList({ postList }: Props) {
                     .map((tag: any, index: any) => (
                       <li
                         key={index}
-                        className="text-[#00df9c] text-sm mr-2 mb-2 rounded-[5px] px-[8px] text-[10px] border border-[#00df9c] text-center"
+                        className="text-[#00df9c] text-sm mr-2 mb-2 pt-1 rounded-[5px] px-[8px] text-[10px] border border-[#00df9c] text-center"
                         style={{ whiteSpace: "nowrap" }}
                       >
                         {tag}

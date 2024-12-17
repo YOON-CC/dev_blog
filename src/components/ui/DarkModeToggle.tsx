@@ -23,9 +23,11 @@ export default function DarkModeToggle() {
           }`}
         >
           {isOn ? (
-            <div className="text-gray-800">🌙</div>
+            <div className="text-gray-800 pt-1">🌙</div>
           ) : (
-            <div className="text-yellow-500">☀️</div>
+            <div className="text-yellow-500 flex justify-center items-center pt-1">
+              ☀️
+            </div>
           )}
         </div>
       </div>

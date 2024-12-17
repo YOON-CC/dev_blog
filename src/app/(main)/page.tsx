@@ -18,8 +18,8 @@ export default function Page() {
   const [postList, setPostList] = useState<any[]>([]); // 게시글 목록 상태
   const [isSticky, setIsSticky] = useState(false);
 
-  const [layout, setLayout] = useState<"grid" | "block">("grid")
-  
+  const [layout, setLayout] = useState<"grid" | "block">("grid");
+
   useEffect(() => {
     const loadPosts = async () => {
       const startTime = Date.now(); // 시작 시간 기록
@@ -34,7 +34,6 @@ export default function Page() {
           }
         );
         console.log("게시글 리스트 api마감:", Date.now() - startTime, "ms");
-
 
         if (!res.ok) {
           throw new Error("게시글을 가져오는 데 실패했습니다.");
@@ -100,7 +99,7 @@ export default function Page() {
           {categoryList.map((cat) => (
             <div
               key={cat._id}
-              className={`text-[16px] cursor-pointer border border-gray-300 rounded-lg p-2 ${
+              className={`text-[16px] cursor-pointer border rounded-lg px-3 pt-3 pb-2  ${
                 category === cat.name
                   ? "font-bold text-[#00DF9C] dark:text-[#00DF9C] border-[#00DF9C]"
                   : "dark:text-white"
@@ -117,7 +116,6 @@ export default function Page() {
       <SideProfile isSticky={isSticky} />
 
       {/* 리스트 */}
-
 
       <article className="flex flex-col items-center">
         <PostList postList={postList} />
