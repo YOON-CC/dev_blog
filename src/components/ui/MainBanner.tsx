@@ -32,33 +32,35 @@ export default function MainBanner() {
 
       <div className="flex items-center justify-between w-[750px] mt-[15px]">
         <div
-          className="flex items-center justify-center w-[490px] h-[340px] bg-black shadow-lg rounded-[10px] animate-fadeInLeft"
+          className="flex items-center justify-center w-[490px] bg-[#efefef] h-[340px] shadow-lg rounded-[10px] dark:bg-[#232323] animate-fadeInLeft"
           style={{
-            background: "linear-gradient(77deg, #f7c7ff, #9eb9ff, #00E4FF)",
+            // background: "linear-gradient(77deg, #f7c7ff, #9eb9ff, #9eb9ff)",
           }}
         >
-          <img
+          {/* <img
             className="w-[300px] h-[300px]"
             src="/banner1.png"
             alt="main image"
-          />
+          /> */}
         </div>
         <div className="w-[230px] h-[340px] flex flex-col justify-between">
           <div
-            className="w-[230px] h-[200px] animate-fadeInTop rounded-[10px] shadow-lg flex items-center justify-center"
+            className="w-[230px] h-[200px] animate-fadeInTop rounded-[10px] bg-[#efefef] shadow-lg flex items-center justify-center dark:bg-[#232323]"
             style={{
-              background: "linear-gradient(77deg , #ddffa6, #00ffaa)",
+              // background: "linear-gradient(77deg , #9eb9ff, #ddffa6)",
+              // background:"#232323",
             }}
           >
-            <img className="w-[180px]" src="/banner2.png" alt="image1" />
+            {/* <img className="w-[180px]" src="/banner1.png" alt="image1" /> */}
           </div>
           <div
-            className="animate-fadeInTop w-[230px] h-[100px] flex items-center justify-center shadow-lg rounded-[10px]"
+            className="animate-fadeInTop w-[230px] h-[100px] flex items-center justify-center bg-[#efefef] shadow-lg rounded-[10px] dark:bg-[#232323]"
             style={{
-              background: "linear-gradient(77deg , #ffe599, #ddffa6)",
+              // background: "linear-gradient(77deg , #9eb9ff, #ddffa6)",
+              // background:"#232323",
             }}
           >
-            <img className="w-[140px] " src="/banner3.png" alt="image2" />
+            {/* <img className="w-[140px] " src="/banner3.png" alt="image2" /> */}
           </div>
         </div>
       </div>
