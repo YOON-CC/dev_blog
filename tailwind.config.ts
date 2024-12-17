@@ -40,6 +40,10 @@ const config: Config = {
         fadeInBottom: "fadeInBottom 1s ease-in-out",
       },
     },
+    fontFamily: {
+      gms: ["var(--font-gms)"],
+      pretendard: ["var(--font-pretendard"],
+    },
     // fontFamily: {
     //   Archivo: ["'Archivo Black'", "sans-serif"],
     //   fantasy: ["fantasy"],

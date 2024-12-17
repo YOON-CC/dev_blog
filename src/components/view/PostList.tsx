@@ -23,19 +23,23 @@ export default function PostList({ postList }: Props) {
         <div className="flex space-x-2">
           <button
             className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
-              layout === "grid" ? "bg-[#3a3a3a] text-white" : "bg-[#efefef] dark:bg-[#232323]"
+              layout === "grid"
+                ? "bg-[#3a3a3a] text-white"
+                : "bg-[#efefef] dark:bg-[#232323]"
             } shadow-md hover:bg-[#dcdcdc] dark:hover:bg-[#3a3a3a] focus:outline-none`}
             onClick={() => setLayout("grid")}
           >
-            2줄씩
+            2 Line
           </button>
           <button
             className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
-              layout === "block" ? "bg-[#3a3a3a] text-white" : "bg-[#efefef] dark:bg-[#232323]"
+              layout === "block"
+                ? "bg-[#3a3a3a] text-white"
+                : "bg-[#efefef] dark:bg-[#232323]"
             } shadow-md hover:bg-[#dcdcdc] dark:hover:bg-[#3a3a3a] focus:outline-none`}
             onClick={() => setLayout("block")}
           >
-            1줄씩
+            1 Line
           </button>
         </div>
       </div>
@@ -46,7 +50,9 @@ export default function PostList({ postList }: Props) {
 
       <div
         className={`${
-          layout === "grid" ? "grid grid-cols-1 md:grid-cols-2 gap-8" : "flex flex-col space-y-4"
+          layout === "grid"
+            ? "grid grid-cols-1 md:grid-cols-2 gap-8"
+            : "flex flex-col space-y-4"
         }`}
       >
         {postList
@@ -62,7 +68,8 @@ export default function PostList({ postList }: Props) {
                   : "flex items-center bg-white rounded-lg shadow-lg dark:bg-[#232323] hover:bg-[#e1e1e1] dark:hover:bg-[#272727] animate-fadeInBottom p-4"
               }`}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = layout === "grid" ? "scale(1.01)" : "none";
+                e.currentTarget.style.transform =
+                  layout === "grid" ? "scale(1.01)" : "none";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = "scale(1)";
@@ -73,7 +80,7 @@ export default function PostList({ postList }: Props) {
                 className={`${
                   layout === "grid"
                     ? "relative w-full h-44 mb-4"
-                    : "flex-shrink-0 relative w-34 h-32 mr-4"
+                    : "flex-shrink-0 relative w-34 h-32 xl:mr-4"
                 }`}
               >
                 <Image
@@ -82,13 +89,19 @@ export default function PostList({ postList }: Props) {
                   height={500}
                   alt="Post Thumbnail"
                   className={`object-cover w-full h-full ${
-                    layout === "block" ? "rounded-lg" : "rounded-tl-lg rounded-tr-lg"
+                    layout === "block"
+                      ? "hidden xl:flex rounded-lg"
+                      : "rounded-tl-lg rounded-tr-lg"
                   }`}
                 />
               </div>
 
               {/* Title and content */}
-              <div className={`${layout === "block" ? "flex-grow pl-2" : "pr-6 pl-6 pb-6 "}`}>
+              <div
+                className={`${
+                  layout === "block" ? "flex-grow pl-2" : "pr-6 pl-6 pb-6 "
+                }`}
+              >
                 <ul className="flex flex-wrap mb-2 list-none m-0">
                   {post.categories
                     .filter((tag: string) => tag !== "All")

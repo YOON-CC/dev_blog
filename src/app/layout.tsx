@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import MainHeader from "@/components/layout/MainHeader";
 import { DarkModeProvider } from "@/context/DarkModeContext";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const gms = localFont({
+  src: "../../public/fonts/GmarketSansMedium.otf",
+  display: "swap",
+  variable: "--font-gms",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={gms.variable}>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <body className="dark:bg-[#2F2F2F]">
+      <body className="dark:bg-[#2F2F2F] font-gms">
         <DarkModeProvider>
           <MainHeader />
           {children}
