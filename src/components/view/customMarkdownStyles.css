@@ -40,12 +40,12 @@ ul {
 /*다크모드*/
 .dark-markdown-preview hr {
   border: none;
-  border-top: 2px solid rgb(225, 225, 225);
+  border-top: 2px solid #393939;
   background: none;
 }
 
 .dark-markdown-preview blockquote {
-  background-color: #1d1d1d;
+  background-color: #3b3b3b;
   color: white;
   border-left: 6px solid #ffffff;
   padding: 10px;
