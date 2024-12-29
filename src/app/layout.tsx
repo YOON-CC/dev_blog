@@ -27,6 +27,19 @@ export default function RootLayout({
     <html lang="en" className={gms.variable}>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <body className="dark:bg-[#2F2F2F] font-gms">
+        <script
+          id="theme-provider"
+          dangerouslySetInnerHTML={{
+            __html: `
+              const darkModeSetting = localStorage.getItem("dark-mode");
+              if (darkModeSetting === "true") {
+                document.documentElement.classList.add("dark");
+              } else {
+                document.documentElement.classList.remove("dark");
+              }
+            `,
+          }}
+        ></script>
         <DarkModeProvider>
           <MainHeader />
           {children}
