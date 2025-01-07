@@ -9,10 +9,8 @@ interface Props {
 }
 
 export default function MarkDwonViewer({ content }: Props) {
-  // console.log(content);
   const { isOn, toggleDarkMode } = useDarkMode();
 
-  console.log(isOn, "입니다.");
   let hello = true;
   if (isOn) {
     hello = false;
