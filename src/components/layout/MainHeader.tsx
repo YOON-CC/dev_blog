@@ -17,7 +17,7 @@ export default function MainHeader() {
           height={100}
           className="rounded-full w-[26px] h-[26px]"
         />
-        <div className="ml-[10px]">CHAN의 연구노트</div>
+        <h1 className="ml-[10px] text-lg font-bold">린터의 개발노트</h1>
       </div>
 
       <TypingUi />

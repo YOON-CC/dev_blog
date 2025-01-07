@@ -40,14 +40,14 @@ export default function TypingUi() {
           height={100}
           className="rounded-full w-6 h-6"
         />
-        <div className="ml-1 font-extrabold italic">CHAN</div>
+        <div className="ml-1 font-extrabold italic">개발자 린터</div>
       </Link>
 
       {!isSticky && (
         <div className={`hidden xl:flex text-sm`}>
           <span className="font-light">안녕하세요!&nbsp;</span>
-          <span className="font-bold">&quot;CHAN&quot;</span>
-          <span className="font-light">의 연구노트 입니다.&nbsp;</span>
+          <span className="font-bold">&quot;린터&quot;</span>
+          <span className="font-light">의 개발노트 입니다.&nbsp;</span>
           <span className="font-light">저에게 있어서 개발은&nbsp;</span>
           <span className="font-bold">
             <Typewriter
