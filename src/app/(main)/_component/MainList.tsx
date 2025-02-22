@@ -20,37 +20,67 @@ export default function MainList(result: any) {
 
   const [layout, setLayout] = useState<"grid" | "block">("grid");
 
-  useEffect(() => {
-    const loadPosts = async () => {
-      const startTime = Date.now(); // 시작 시간 기록
-      console.log("csr로 적용하는 ");
-      console.log("게시글 리스트 api 호출:", Date.now() - startTime, "ms");
+  // useEffect(() => {
+  //   const loadPosts = async () => {
+  //     const startTime = Date.now(); // 시작 시간 기록
+  //     console.log("csr로 적용하는 ");
+  //     console.log("게시글 리스트 api 호출:", Date.now() - startTime, "ms");
 
-      try {
-        const res = await fetch(
-          `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/list?category=${category}`,
-          {
-            cache: "no-store",
-            headers: {},
-          }
-        );
-        console.log("게시글 리스트 api마감:", Date.now() - startTime, "ms");
+  //     try {
+  //       const res = await fetch(
+  //         `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/list?category=${category}`,
+  //         {
+  //           cache: "no-store",
+  //           headers: {},
+  //         }
+  //       );
+  //       console.log("게시글 리스트 api마감:", Date.now() - startTime, "ms");
 
-        if (!res.ok) {
-          throw new Error("게시글을 가져오는 데 실패했습니다.");
+  //       if (!res.ok) {
+  //         throw new Error("게시글을 가져오는 데 실패했습니다.");
+  //       }
+
+  //       const data = await res.json();
+  //       setPostList(data);
+  //       return data;
+  //     } catch (error) {
+  //       console.error("API 호출 중 오류 발생:", error);
+  //       throw error;
+  //     }
+  //   };
+
+  //   loadPosts();
+  // }, [category]);
+
+  // 게시글 csr로 적용
+  const handleGetList = async (category: string) => {
+    setCategory(category);
+    const startTime = Date.now(); // 시작 시간 기록
+    console.log("csr로 적용하는 ");
+    console.log("게시글 리스트 api 호출:", Date.now() - startTime, "ms");
+
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/list?category=${category}`,
+        {
+          cache: "no-store",
+          headers: {},
         }
+      );
+      console.log("게시글 리스트 api마감:", Date.now() - startTime, "ms");
 
-        const data = await res.json();
-        setPostList(data);
-        return data;
-      } catch (error) {
-        console.error("API 호출 중 오류 발생:", error);
-        throw error;
+      if (!res.ok) {
+        throw new Error("게시글을 가져오는 데 실패했습니다.");
       }
-    };
 
-    loadPosts();
-  }, [category]);
+      const data = await res.json();
+      setPostList(data);
+      return data;
+    } catch (error) {
+      console.error("API 호출 중 오류 발생:", error);
+      throw error;
+    }
+  };
 
   useEffect(() => {
     const startTime = Date.now(); // 시작 시간 기록
@@ -105,7 +135,7 @@ export default function MainList(result: any) {
                   ? "font-bold text-[#00DF9C] dark:text-[#00DF9C] border-[#00DF9C]"
                   : "dark:text-white"
               }`}
-              onClick={() => setCategory(cat.name)}
+              onClick={() => handleGetList(cat.name)}
             >
               {cat.name === "All" ? "전체" : cat.name}{" "}
               {`(${cat.postIds.length})`}
@@ -138,7 +168,7 @@ export default function MainList(result: any) {
                   ? "font-bold text-[#00DF9C] dark:text-[#00DF9C]"
                   : "dark:text-[#ffffff]"
               }`}
-              onClick={() => setCategory(cat.name)}
+              onClick={() => handleGetList(cat.name)}
             >
               {cat.name === "All" ? "전체" : cat.name}{" "}
               {`(${cat.postIds.length})`}
