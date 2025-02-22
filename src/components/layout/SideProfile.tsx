@@ -8,12 +8,10 @@ interface Props {
   isSticky: boolean;
 }
 
-export default function SideProfile({ isSticky }: Props) {
+export default function SideProfile() {
   return (
     <aside
-      className={`${
-        isSticky ? "block opacity-100" : "hidden opacity-0"
-      } xl:block z-10 w-[300px] h-[fit-content] sticky top-[100px] transition-opacity duration-500`}
+      className={`xl:block z-10 w-[300px] h-[fit-content] sticky top-[100px] transition-opacity duration-500`}
       style={{
         display: "flex",
         justifyContent: "end",

@@ -7,7 +7,7 @@ export async function GET(req: NextRequest) {
     const categoryCollection = db.collection("categories");
 
     const categories = await categoryCollection.find({}).toArray();
-    console.log(categories);
+    // console.log(categories);
     return NextResponse.json(categories);
   } catch (error) {
     console.error("데이터 조회 중 오류 발생:", error);
