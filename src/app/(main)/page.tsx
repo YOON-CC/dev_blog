@@ -5,6 +5,7 @@ import PostList from "@/components/view/PostList";
 import { fetchData } from "@/app/(main)/_fetch/api";
 import Link from "next/link";
 import SideProfile from "@/components/layout/SideProfile";
+import { json } from "stream/consumers";
 
 type CategoryType = {
   _id: string;
@@ -27,7 +28,7 @@ export default function Page() {
 
       try {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/list?category=${category}`,
+          `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/list?category=All`,
           {
             cache: "no-store",
             headers: {},
@@ -49,7 +50,7 @@ export default function Page() {
     };
 
     loadPosts();
-  }, [category, layout]);
+  }, []);
 
   useEffect(() => {
     const startTime = Date.now(); // 시작 시간 기록
@@ -118,7 +119,8 @@ export default function Page() {
       {/* 리스트 */}
 
       <article className="flex flex-col items-center">
-        <PostList postList={postList} />
+        {/* <PostList postList={postList} /> */}
+        {JSON.stringify(postList)}
       </article>
 
       {/* 카테고리-xl 사이즈일 때*/}
