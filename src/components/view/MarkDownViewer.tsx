@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import MDEditor from "@uiw/react-md-editor";
 import { useDarkMode } from "@/context/DarkModeContext";
 import "./customMarkdownStyles.css";
@@ -10,6 +11,25 @@ interface Props {
 
 export default function MarkDwonViewer({ content }: Props) {
   const { isOn, toggleDarkMode } = useDarkMode();
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/api/category`,
+          {
+            cache: "no-store",
+          }
+        );
+
+        console.log(res);
+      } catch (error) {
+        console.error("Failed to fetch categories:", error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
 
   let hello = true;
   if (isOn) {

@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import SocialBtn from "./SocialBtn";
 
 export default function MainBanner() {
-  const [imageSrc1, setImageSrc1] = useState("/banner6.png");
-  const [imageSrc3, setImageSrc3] = useState("/banner8.png");
+  const [imageSrc1, setImageSrc1] = useState("/banner1.png");
+  const [imageSrc3, setImageSrc3] = useState("/banner5.png");
 
   return (
     <div className="hidden xl:flex w-full h-[fit-content] justify-center flex-col items-center mt-[60px]">
@@ -27,36 +27,36 @@ export default function MainBanner() {
         <SocialBtn />
       </div>
       <div className="flex items-center justify-between w-[750px] mt-[15px]">
-        <div className="relative flex items-center justify-center w-[490px] h-[340px] bg-[#efefef] shadow-lg rounded-[10px] dark:bg-[#232323] animate-fadeInLeft group overflow-hidden cursor-pointer"
-          onMouseEnter={() => setImageSrc1("/banner1.png")}
-          onMouseLeave={() => setImageSrc1("/banner6.png")}
-        >
-          <div className="absolute inset-0 w-0 bg-gradient-to-r from-[#f7c7ff] to-[#9eb9ff] rounded-[5px] shadow-[inset_2px_2px_2px_rgba(255,255,255,0.5),7px_7px_20px_rgba(0,0,0,0.1),4px_4px_5px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in-out group-hover:w-full"></div>
+        <div className="relative flex items-center justify-center w-[460px] h-[270px] bg-gradient-to-r from-[#6dfaff] to-[#47d6f0] shadow-lg rounded-[10px] dark:bg-[#232323] animate-fadeInLeft group overflow-hidden cursor-pointer">
           <img
-            className="w-[300px] mt-[20px] mr-[15px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
+            className="w-[180px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
             src={imageSrc1}
             alt="image1"
           />
         </div>
-        <div className="w-[230px] h-[340px] flex flex-col justify-between">
-          <div
-            className="relative w-[230px] h-[200px] animate-fadeInTop rounded-[10px] bg-[#efefef] shadow-lg flex items-center justify-center dark:bg-[#232323] animate-fadeInLeft group overflow-hidden cursor-pointer"
-          >
-          <div className="absolute inset-0 w-0 bg-gradient-to-r from-[#9eb9ff] to-[#ddffa6] rounded-[5px] shadow-[inset_2px_2px_2px_rgba(255,255,255,0.5),7px_7px_20px_rgba(0,0,0,0.1),4px_4px_5px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in-out group-hover:w-full"></div>
-            <img
-              className="w-[180px] mt-[20px] mr-[15px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
-              src="/banner5.png"
-              alt="image2"
-            />
-          </div>
-          <div
-            className="relative animate-fadeInTop w-[230px] h-[100px] flex items-center justify-center bg-[#efefef] shadow-lg rounded-[10px] dark:bg-[#232323] animate-fadeInLeft group overflow-hidden cursor-pointer"
-            onMouseEnter={() => setImageSrc3("/banner3.png")}
-            onMouseLeave={() => setImageSrc3("/banner8.png")}
-          >
-          <div className="absolute inset-0 w-0 bg-gradient-to-r from-[#9eb9ff] to-[#ddffa6] rounded-[5px] shadow-[inset_2px_2px_2px_rgba(255,255,255,0.5),7px_7px_20px_rgba(0,0,0,0.1),4px_4px_5px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in-out group-hover:w-full"></div>
-            <img className="w-[130px] relative z-[1] transition-transform duration-300 group-hover:z-[10]" src={imageSrc3} alt="image2" />
-          </div>
+        <div className="w-[270px] h-[270px] flex items-center justify-center bg-[#f3f3f3] dark:bg-[#232323] shadow-lg rounded-[10px]">
+          <img
+            className="w-[160px] mt-[10px] mr-[15px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
+            src={imageSrc3}
+            alt="image1"
+          />
+        </div>
+      </div>
+      <div className="flex items-center justify-between w-[750px] h-[160px] mt-[15px]">
+        <div className="w-[290px] h-[160px] flex items-center justify-center bg-[#f3f3f3] dark:bg-[#232323] shadow-lg rounded-[10px]">
+          <img
+            className="w-[160px] mt-[10px] mr-[15px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
+            src={imageSrc3}
+            alt="image1"
+          />
+        </div>
+
+        <div className="w-[440px] h-[160px] flex items-center justify-center bg-[#f3f3f3] dark:bg-[#232323] shadow-lg rounded-[10px]">
+          <img
+            className="w-[160px] mt-[10px] mr-[15px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
+            src={imageSrc3}
+            alt="image1"
+          />
         </div>
       </div>
     </div>

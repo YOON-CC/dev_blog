@@ -14,23 +14,23 @@ const gms = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "개발자 린터",
-  description: "린터(Rinter)의 개발노트 입니다.",
-  keywords: "린터, Rinter, YOON-CC, 조윤찬",
-  authors: [{ name: "린터", url: "https://github.com/YOON-CC" }],
+  title: "개발자 윤찬",
+  description: "윤찬(YOON-CC)의 개발노트 입니다.",
+  keywords: "윤찬, YOON-CC, YOON-CC, 조윤찬",
+  authors: [{ name: "윤찬", url: "https://github.com/YOON-CC" }],
   robots: "index, follow",
   themeColor: "#ffffff",
   openGraph: {
-    title: "린터 - FE의 개발노트 입니다.",
-    description: "린터(Rinter)의 개발노트 입니다.",
+    title: "윤찬 - FE의 개발노트 입니다.",
+    description: "윤찬(YOON-CC)의 개발노트 입니다.",
     url: "https://www.dev-chan.site/",
-    siteName: "린터",
+    siteName: "윤찬",
     images: [
       {
         url: "https://www.dev-chan.site/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fchan.7099a3e7.jpg&w=128&q=75",
         width: 1200,
         height: 630,
-        alt: "린터 - 개발노트트",
+        alt: "윤찬 - 개발노트트",
       },
     ],
     locale: "ko_KR",
@@ -47,16 +47,16 @@ export default function RootLayout({
     <html lang="ko" className={gms.variable}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="린터(Rinter)의 개발노트 입니다." />
-        <meta name="keywords" content="린터(Rinter)의 개발노트 입니다." />
+        <meta name="description" content="윤찬(YOON-CC)의 개발노트 입니다." />
+        <meta name="keywords" content="윤찬(YOON-CC)의 개발노트 입니다." />
         <meta name="author" content="Your Name" />
-        <meta property="og:title" content="린터(Rinter)의 개발노트 입니다." />
+        <meta property="og:title" content="윤찬(YOON-CC)의 개발노트 입니다." />
         <meta
           property="og:description"
-          content="린터(Rinter)의 개발노트 입니다."
+          content="윤찬(YOON-CC)의 개발노트 입니다."
         />
         <meta property="og:url" content="https://www.dev-chan.site/" />
-        <meta property="og:site_name" content="개발자 린터" />
+        <meta property="og:site_name" content="개발자 윤찬" />
         <meta
           property="og:image"
           content="https://yourwebsite.com/og-image-linter.png"
