@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     type: "article",
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

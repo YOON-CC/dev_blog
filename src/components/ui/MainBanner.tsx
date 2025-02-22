@@ -42,7 +42,7 @@ export default function MainBanner() {
           />
         </div>
       </div>
-      <div className="flex items-center justify-between w-[750px] h-[160px] mt-[15px]">
+      <div className="flex items-center justify-between w-[750px] h-[160px] mt-[20px]">
         <div className="w-[290px] h-[160px] flex items-center justify-center bg-[#f3f3f3] dark:bg-[#232323] shadow-lg rounded-[10px]">
           <img
             className="w-[160px] mt-[10px] mr-[15px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
