@@ -144,7 +144,7 @@ export default function MainList(result: any) {
         </div>
       </aside>
 
-      <SideProfile />
+      <SideProfile isSticky={isSticky} />
 
       {/* 리스트 */}
 
