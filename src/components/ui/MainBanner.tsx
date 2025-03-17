@@ -8,8 +8,8 @@ import SocialBtn from "./SocialBtn";
 export default function MainBanner() {
   const [imageSrc1, setImageSrc1] = useState("/banner1.png");
   const [imageSrc2, setImageSrc2] = useState("/banner2.png");
-
-  const [imageSrc3, setImageSrc3] = useState("/banner5.png");
+  const [imageSrc3, setImageSrc3] = useState("/banner3.png");
+  const [imageSrc4, setImageSrc4] = useState("/banner4.png");
 
   return (
     <div className="hidden xl:flex w-full h-[fit-content] justify-center flex-col items-center mt-[60px]">
@@ -47,7 +47,7 @@ export default function MainBanner() {
       <div className="flex items-center justify-between w-[750px] h-[160px] mt-[20px]">
         <div className="w-[290px] h-[160px] flex items-center justify-center bg-[#f3f3f3] dark:bg-[#232323] shadow-lg rounded-[10px]">
           <img
-            className="w-[150px] mt-[10px] mr-[15px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
+            className="w-[180px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
             src={imageSrc3}
             alt="image1"
           />
@@ -55,8 +55,8 @@ export default function MainBanner() {
 
         <div className="w-[440px] h-[160px] flex items-center justify-center bg-[#f3f3f3] dark:bg-[#232323] shadow-lg rounded-[10px]">
           <img
-            className="w-[100px] mt-[10px] mr-[15px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
-            src={imageSrc3}
+            className="w-[350px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
+            src={imageSrc4}
             alt="image1"
           />
         </div>
