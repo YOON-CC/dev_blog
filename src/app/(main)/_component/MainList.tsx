@@ -132,7 +132,7 @@ export default function MainList(result: any) {
               key={cat._id}
               className={`text-[16px] cursor-pointer border rounded-lg px-3 pt-3 pb-2  ${
                 category === cat.name
-                  ? "font-bold text-[#00DF9C] dark:text-[#00DF9C] border-[#00DF9C]"
+                  ? "font-bold text-[#3F96FF] dark:text-[#3F96FF] border-[#3F96FF]"
                   : "dark:text-white"
               }`}
               onClick={() => handleGetList(cat.name)}
@@ -165,7 +165,7 @@ export default function MainList(result: any) {
               key={cat._id}
               className={`text-[16px] cursor-pointer ${
                 category === cat.name
-                  ? "font-bold text-[#00DF9C] dark:text-[#00DF9C]"
+                  ? "font-bold text-[#3F96FF] dark:text-[#3F96FF]"
                   : "dark:text-[#ffffff]"
               }`}
               onClick={() => handleGetList(cat.name)}

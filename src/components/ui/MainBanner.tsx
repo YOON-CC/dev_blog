@@ -27,7 +27,7 @@ export default function MainBanner() {
         <SocialBtn />
       </div>
       <div className="flex items-center justify-between w-[750px] mt-[15px]">
-        <div className="relative flex items-center justify-center w-[460px] h-[270px] bg-gradient-to-r from-[#6dfaff] to-[#47d6f0] shadow-lg rounded-[10px] dark:bg-[#232323] animate-fadeInLeft group overflow-hidden cursor-pointer">
+        <div className="relative flex items-center justify-center w-[460px] h-[270px] bg-[#3F96FF] shadow-lg rounded-[10px] dark:bg-[#3F96FF] animate-fadeInLeft group overflow-hidden cursor-pointer">
           <img
             className="w-[180px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
             src={imageSrc1}

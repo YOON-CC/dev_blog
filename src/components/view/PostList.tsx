@@ -12,7 +12,7 @@ interface Props {
 }
 
 export default function PostList({ postList }: Props) {
-  const [layout, setLayout] = useState<"grid" | "block">("grid");
+  const [layout, setLayout] = useState<"grid" | "block">("block");
 
   return (
     <article className="w-[90%] xl:w-[750px] mx-5 h-fit">
@@ -22,24 +22,24 @@ export default function PostList({ postList }: Props) {
         </h1>
         <div className="flex space-x-2">
           <button
-            className={`px-4 pt-2 pb-1 rounded-lg font-semibold text-sm transition-all ${
-              layout === "grid"
-                ? "bg-[#3a3a3a] text-white"
-                : "bg-[#efefef] dark:bg-[#232323]"
-            } shadow-md hover:bg-[#dcdcdc] dark:hover:bg-[#3a3a3a] focus:outline-none`}
-            onClick={() => setLayout("grid")}
-          >
-            2 Line
-          </button>
-          <button
-            className={`px-4 pt-2 pb-1 rounded-lg font-semibold text-sm transition-all ${
+            className={`px-4 pt-2 pb-1 rounded-lg font-semibold text-sm transition-all shadow-md focus:outline-none ${
               layout === "block"
-                ? "bg-[#3a3a3a] text-white"
-                : "bg-[#efefef] dark:bg-[#232323]"
-            } shadow-md hover:bg-[#dcdcdc] dark:hover:bg-[#3a3a3a] focus:outline-none`}
+                ? "bg-[#3F96FF] text-white"
+                : "bg-[#efefef] dark:bg-[#232323] hover:bg-[#dcdcdc] dark:hover:bg-[#3a3a3a]"
+            }`}
             onClick={() => setLayout("block")}
           >
             1 Line
+          </button>
+          <button
+            className={`px-4 pt-2 pb-1 rounded-lg font-semibold text-sm transition-all shadow-md focus:outline-none ${
+              layout === "grid"
+                ? "bg-[#3F96FF] text-white"
+                : "bg-[#efefef] dark:bg-[#232323] hover:bg-[#dcdcdc] dark:hover:bg-[#3a3a3a]"
+            }`}
+            onClick={() => setLayout("grid")}
+          >
+            2 Line
           </button>
         </div>
       </div>
@@ -108,7 +108,7 @@ export default function PostList({ postList }: Props) {
                     .map((tag: any, index: any) => (
                       <li
                         key={index}
-                        className="text-[#00df9c] text-sm mr-2 mb-2 pt-1 rounded-[5px] px-[8px] text-[10px] border border-[#00df9c] text-center"
+                        className="text-[#3A3A3A] dark:text-[#ffffff] text-sm mr-2 mb-2 pt-1 rounded-[5px] px-[8px] text-[10px] border border-[#3A3A3A] dark:border-[#ffffff] text-center"
                         style={{ whiteSpace: "nowrap" }}
                       >
                         {tag}
