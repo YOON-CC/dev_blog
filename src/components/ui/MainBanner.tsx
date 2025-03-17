@@ -7,6 +7,8 @@ import SocialBtn from "./SocialBtn";
 
 export default function MainBanner() {
   const [imageSrc1, setImageSrc1] = useState("/banner1.png");
+  const [imageSrc2, setImageSrc2] = useState("/banner2.png");
+
   const [imageSrc3, setImageSrc3] = useState("/banner5.png");
 
   return (
@@ -29,15 +31,15 @@ export default function MainBanner() {
       <div className="flex items-center justify-between w-[750px] mt-[15px]">
         <div className="relative flex items-center justify-center w-[460px] h-[270px] bg-[#3F96FF] shadow-lg rounded-[10px] dark:bg-[#3F96FF] animate-fadeInLeft group overflow-hidden cursor-pointer">
           <img
-            className="w-[180px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
+            className="w-[235px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
             src={imageSrc1}
             alt="image1"
           />
         </div>
         <div className="w-[270px] h-[270px] flex items-center justify-center bg-[#f3f3f3] dark:bg-[#232323] shadow-lg rounded-[10px]">
           <img
-            className="w-[160px] mt-[10px] mr-[15px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
-            src={imageSrc3}
+            className="w-[160px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
+            src={imageSrc2}
             alt="image1"
           />
         </div>
@@ -45,7 +47,7 @@ export default function MainBanner() {
       <div className="flex items-center justify-between w-[750px] h-[160px] mt-[20px]">
         <div className="w-[290px] h-[160px] flex items-center justify-center bg-[#f3f3f3] dark:bg-[#232323] shadow-lg rounded-[10px]">
           <img
-            className="w-[160px] mt-[10px] mr-[15px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
+            className="w-[150px] mt-[10px] mr-[15px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
             src={imageSrc3}
             alt="image1"
           />
@@ -53,7 +55,7 @@ export default function MainBanner() {
 
         <div className="w-[440px] h-[160px] flex items-center justify-center bg-[#f3f3f3] dark:bg-[#232323] shadow-lg rounded-[10px]">
           <img
-            className="w-[160px] mt-[10px] mr-[15px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
+            className="w-[100px] mt-[10px] mr-[15px] relative z-[1] transition-transform duration-300 group-hover:z-[10]"
             src={imageSrc3}
             alt="image1"
           />
