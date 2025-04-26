@@ -22,7 +22,7 @@ export default function SocialBtnSide() {
         </li>
         {/* 유튜브 */}
         <li className="side-icon-item-two">
-          <Link href={"https://www.youtube.com/@yooncc"}>
+          <Link href={"https://www.youtube.com/@moko_developer"}>
             <svg height="24" version="1.1" viewBox="0 0 24 24" width="24">
               <rect
                 height="24"

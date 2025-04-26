@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function SocialBtn() {
   return (
-    <nav >
+    <nav>
       <ul className="icon-list">
         {/* 깃허브 */}
         <li className="icon-item-one">
@@ -22,7 +22,7 @@ export default function SocialBtn() {
         </li>
         {/* 유튜브 */}
         <li className="icon-item-two">
-          <Link href={"https://www.youtube.com/@yooncc"}>
+          <Link href={"https://www.youtube.com/@moko_developer"}>
             <svg height="24" version="1.1" viewBox="0 0 24 24" width="24">
               <rect
                 height="24"
