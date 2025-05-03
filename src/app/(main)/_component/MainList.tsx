@@ -56,8 +56,8 @@ export default function MainList(result: any) {
   const handleGetList = async (category: string) => {
     setCategory(category);
     const startTime = Date.now(); // 시작 시간 기록
-    console.log("csr로 적용하는 ");
-    console.log("게시글 리스트 api 호출:", Date.now() - startTime, "ms");
+    // console.log("csr로 적용하는 ");
+    // console.log("게시글 리스트 api 호출:", Date.now() - startTime, "ms");
 
     try {
       const res = await fetch(
@@ -96,7 +96,7 @@ export default function MainList(result: any) {
         const data: CategoryType[] = await res.json();
         console.log("카테고리 api마감:", Date.now() - startTime, "ms");
 
-        console.log(data);
+        // console.log(data);
         setCategoryList(data);
       } catch (error) {
         console.error("Failed to fetch categories:", error);

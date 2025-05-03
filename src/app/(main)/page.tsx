@@ -11,9 +11,14 @@ async function getMainListInfo() {
       headers: {},
     }
   );
-  console.log("받음");
   const data = await res.json();
-  return data;
+  console.log(data);
+  const sortedData = data.sort(
+    (a: any, b: any) =>
+      new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+  );
+  console.log(sortedData);
+  return sortedData;
   // return true;
 }
 
