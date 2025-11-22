@@ -129,7 +129,7 @@ export default function PostList({ postList }: Props) {
       <footer>
         <div className="flex flex-col justify-center items-center mt-4 text-[11px] p-10 dark:text-[#ffffff]">
           <div>Thank You for Visiting My Blog, Have a Good Day 😆</div>
-          <div>ⓒYoonchan Cho</div>
+          <div>ⓒYoonchan CHO</div>
         </div>
       </footer>
     </article>
